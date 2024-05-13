@@ -1,0 +1,128 @@
+body{
+    font-family: "Lato", sans-serif;
+}
+#download{
+    width: 250px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+#TipoDeBolo{
+    margin-bottom: 15px;
+}
+
+
+.email{
+    display: flex;
+}
+#envelope{
+    margin-right: 12px;
+
+}
+
+.numero{
+    display: flex;
+}
+
+#whatsapp{
+    margin-right: 12px;
+}
+
+ #cadastro{
+    margin-left: 20px;
+    padding-right: 20px;
+ }
+
+
+ #cadastro{
+    padding: 6px 8px;
+    width: 150px;
+    color:black;
+    background-color: none;
+    border: 1px solid black;
+    border-radius: 7px;
+    
+ }
+
+ #cadastro:hover{
+    background-color: black;
+    color: white;
+ }
+
+
+ .img-bolodecenoura{
+    margin-top: 30px;
+    width: 900px;
+    border-radius: 15px;
+    margin-left: 180px;
+}
+
+.title{
+  margin-left: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.igredientes{
+  margin-top: 100px;  
+  text-align: center;
+}
+
+.list{
+    margin-top: 20px;
+    
+}
+
+li{
+    line-height: 40px;
+}
+
+h2{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#linkCadastro{
+    text-decoration: none;
+    color:black;
+}
+
+#linkCadastro:hover{
+    color: white;
+}
+
+.header{
+    margin-left: 10px;
+}
+
+#c1 {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-color: rgb(255 170 91);
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+#c2{
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-color: rgb(255 170 91);
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+#c3{
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-color: rgb(255 170 91);
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.card{
+    border-color: rgb(255 170 91);
+}
