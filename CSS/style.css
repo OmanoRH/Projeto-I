@@ -34,21 +34,6 @@ body{
  }
 
 
- #cadastro{
-    padding: 6px 8px;
-    width: 150px;
-    color:black;
-    background-color: none;
-    border: 1px solid black;
-    border-radius: 7px;
-    
- }
-
- #cadastro:hover{
-    background-color: black;
-    color: white;
- }
-
 
  .img-bolodecenoura{
     margin-top: 30px;
