@@ -1,131 +1,140 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cadastro de Bolo</title>
-        <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    </head>
-    <body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Bolo</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="header">
+        <a href="index.html"><img class="logo" src="Imagens/Titulo.png" alt="Logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tipos de Bolos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bolos Gourmet</a></li>
+              <li><a class="dropdown-item" href="#">Bolos Vulcão</a></li>
+              <li><a class="dropdown-item" href="#">Bolos Caseiros</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+
+        <div id="cadastro">
+          <a href="cadastro.html"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
+        </div>
+      </div>
+  </nav>
 
 
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="header">
-                <a href="index.html"><img class="logo" src="Imagens/Titulo.png" alt="Logo"></a>
-              </div>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Tipos de Bolos
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Bolos Gourmet</a></li>
-                      <li><a class="dropdown-item" href="#">Bolos Vulcão</a></li>
-                      <li><a class="dropdown-item" href="#">Bolos Caseiros</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-            
-                <div id="cadastro">
-                  <a href="cadastro.html"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
-              </div>
-            </div>
-          </nav>
+  <div class="container">
+    <div class="row">
+      <img id="download" src="Imagens/Group 6.png" alt="simbulo de download">
+      <form>
+
+
+        <label for="TipoDeBolo">Tipo de Bolo</label>
+        <select id="TipoDeBolo" required>
+          <option value="" selected disabled>Selecione o tipo de Bolo da sua Receita</option>
+          <option value="Gourmet"> Bolo Gourmet</option>
+          <option value="Vulcão"> Bolo Vulcão</option>
+          <option value="Caseiro"> Bolo Caseiro</option>
+        </select> <br>
+
+
+        <label for="NomeDoBolo">Nome do Bolo:</label>
+        <input required id="NomeDoBolo" type="text" placeholder="Coloque aqui o Nome do seu Bolo">
+      </form>
+    </div>
+  </div>
 
 
 
-        <div class="container">
-            <div class="row">
-                <img id="download" src="Imagens/Group 6.png" alt="simbulo de download">
-                <form>
+  <div class="container">
+    <div class="row">
+      <form>
 
 
-                    <label for="TipoDeBolo">Tipo de Bolo</label>
-                    <select id="TipoDeBolo" required>
-                        <option value="" selected disabled>Selecione o tipo de Bolo da sua Receita</option>
-                        <option value="Gourmet"> Bolo Gourmet</option>
-                        <option value="Vulcão"> Bolo Vulcão</option>
-                        <option value="Caseiro"> Bolo Caseiro</option>
-                    </select> <br>
-
-
-                    <label for="NomeDoBolo">Nome do Bolo:</label>
-                    <input required id="NomeDoBolo" type="text" placeholder="Coloque aqui o Nome do seu Bolo">
-                </form>
-            </div>
+        <div class="mb-3 mt-5">
+          <label for="exampleFormControlTextarea1" class="form-label">Faça uma lista dos Igredientes
+            necessários:</label>
+          <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
 
-
-        <div class="container">
-            <div class="row">
-                <form>
-
-
-                    <div class="mb-3 mt-5">
-                        <label for="exampleFormControlTextarea1" class="form-label">Faça uma lista dos Igredientes necessários:</label>
-                        <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-
-
-                      <div class="mb-3 mt-5">
-                        <label for="exampleFormControlTextarea1" class="form-label">Descreva o Modo de Preparo do Bolo Usando os Ingredientes:</label>
-                        <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-
-                    
-                    <div class="mb-3 mt-5">
-                        <input required onclick="" type="submit" value="Enviar">
-                    </div>
-                </form>
-            </div>
+        <div class="mb-3 mt-5">
+          <label for="exampleFormControlTextarea1" class="form-label">Descreva o Modo de Preparo do Bolo Usando os
+            Ingredientes:</label>
+          <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
 
-          <script src="JS/bootstrap.bundle.min.js"></script>
-          <script src="JS/script.js"></script>
-    </body>
-
-
-
-    <footer class="bg-body-tertiary text-center text-lg-start mt-5">
-        <div class="container p-4">
-          <div class="row">
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">E-mail</h5>
-              <span class="email">
-                <i id="envelope" class="bi bi-envelope"></i>
-                <p>
-                @Boleirosmtfodas@gmail.com
-                </p>
-            </span>
-            </div>
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase">Número para contato</h5>
-              <span class="numero">
-                <i id="whatsapp" class="bi bi-whatsapp"></i>
-               <p>
-                83 98892-2922
-               </p>
-            </span>
-            </div>
-          </div>
+        <div class="mb-3 mt-5">
+          <input required onclick="" type="submit" value="Enviar">
         </div>
-      </footer>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/script.js"></script>
+</body>
+
+
+<!-- Footer -->
+<footer class="bg-body-tertiary text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+
+      <!-- Email -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">E-mail</h5>
+        <span class="email">
+          <i id="envelope" class="bi bi-envelope"></i>
+          <p>
+            @Boleirosmtfodas@gmail.com
+          </p>
+        </span>
+      </div>
+
+      <!-- Contato -->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Número para contato</h5>
+        <span class="numero">
+          <i id="whatsapp" class="bi bi-whatsapp"></i>
+          <p>
+            83 98892-2922
+          </p>
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
