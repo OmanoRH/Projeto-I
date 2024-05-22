@@ -111,3 +111,11 @@ h2{
 .card{
     border-color: rgb(255 170 91);
 }
+
+p{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
