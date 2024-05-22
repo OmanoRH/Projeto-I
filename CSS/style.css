@@ -1,6 +1,4 @@
-body{
-    font-family: "Lato", sans-serif;
-}
+
 #download{
     width: 250px;
     margin-bottom: 15px;
@@ -43,7 +41,7 @@ body{
 }
 
 .title{
-  margin-left: 500px;
+  
   margin-top: 30px;
   margin-bottom: 30px;
 }
