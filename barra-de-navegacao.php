@@ -28,7 +28,7 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Tipos de Bolos
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="background-color: white;">
               <li><a class="dropdown-item" href="gourmet.php">Bolos Gourmet</a></li>
               <li><a class="dropdown-item" href="vulcão.php">Bolos Vulcão</a></li>
               <li><a class="dropdown-item" href="caseiro.php">Bolos Caseiros</a></li>
@@ -39,7 +39,7 @@
 
         <!-- Barra de Pesquisa -->
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
 
 
           <!-- Botão de Busca -->
