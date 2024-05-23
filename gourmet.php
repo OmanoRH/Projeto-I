@@ -48,7 +48,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@
 
       <!-- Logo do Site -->
       <div class="header">
-        <a href="index.html"><img class="logo" src="Imagens/Titulo.png" alt="Logo"></a>
+        <a href="index.php"><img class="logo" src="Imagens/Titulo.png" alt="Logo"></a>
       </div>
 
 
@@ -19,7 +19,7 @@
 
           <!-- Botão de Inicio -->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
           </li>
 
 
@@ -29,9 +29,9 @@
               Tipos de Bolos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="gourmet.html">Bolos Gourmet</a></li>
-              <li><a class="dropdown-item" href="vulcão.html">Bolos Vulcão</a></li>
-              <li><a class="dropdown-item" href="caseiro.html">Bolos Caseiros</a></li>
+              <li><a class="dropdown-item" href="gourmet.php">Bolos Gourmet</a></li>
+              <li><a class="dropdown-item" href="vulcão.php">Bolos Vulcão</a></li>
+              <li><a class="dropdown-item" href="caseiro.php">Bolos Caseiros</a></li>
             </ul>
           </li>
         </ul>
@@ -49,7 +49,7 @@
 
         <!-- Botão de Cadastro de Bolos -->
         <div id="cadastro">
-          <a href="cadastro.html"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
+          <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
         </div>
       </div>
   </nav>

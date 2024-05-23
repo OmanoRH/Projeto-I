@@ -26,7 +26,7 @@
   ?>
 
 
-
+  <!-- introdução do site -->
   <div class="container">
     <div class="row">
       <h1 class="mt-3">Bem-vindo ao Boleiros Receitas!</h1>
@@ -36,6 +36,8 @@
     </div>
   </div>
 
+
+  <!-- carrossel -->
   <div class="container">
     <div id="carouselExampleCaptions" class="carousel slide">
       <div class="carousel-indicators">
@@ -90,7 +92,10 @@
       </button>
     </div>
   </div>
+  <!-- fim do carrossel -->
 
+  
+  <!-- cards -->
   <div class="container">
     <div class="row">
       <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
@@ -102,7 +107,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -116,7 +121,7 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
@@ -130,14 +135,15 @@
             <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
               e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
               receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.html" class="btn btn-primary">Ver Receita Completa</a>
+            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
           </div>
         </div>
       </div>
     </div>
-
-
   </div>
+  <!-- fim dos cards -->
+
+
   <!-- Linkagem do JS -->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
