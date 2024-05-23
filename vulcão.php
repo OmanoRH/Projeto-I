@@ -17,62 +17,12 @@
 
 <body>
 
-  <!--Começo da Barra de Navegação -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Barra de Navegação -->
+  <?php
 
-
-      <!-- Logo do Site -->
-      <div class="header">
-        <a href="index.html"><img class="logo" src="Imagens/Titulo.png" alt="Logo"></a>
-      </div>
-
-
-      <!-- Botões -->
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-          <!-- Botão de Inicio -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-          </li>
-
-
-          <!-- Lista de Categorias -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Tipos de Bolos
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="gourmet.html">Bolos Gourmet</a></li>
-              <li><a class="dropdown-item" href="vulcão.html">Bolos Vulcão</a></li>
-              <li><a class="dropdown-item" href="caseiro.html">Bolos Caseiros</a></li>
-            </ul>
-          </li>
-        </ul>
-
-
-        <!-- Barra de Pesquisa -->
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
-
-
-          <!-- Botão de Busca -->
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
-
-
-        <!-- Botão de Cadastro de Bolos -->
-        <div id="cadastro">
-          <a href="cadastro.html"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
-        </div>
-      </div>
-  </nav>
-  <!-- FIm da Barra de Navegação -->
+    require("barra-de-navegacao.php");
+    
+  ?>
 
 
   <!-- Interface -->
@@ -183,37 +133,12 @@
 </body>
 
 
-<!-- Footer -->
-<footer class="bg-body-tertiary text-center text-lg-start mt-5">
-  <div class="container p-4">
-    <div class="row">
+  <!-- Rodapé do Site -->
+  <?php
 
+    require("rodape.php")
 
-      <!-- Email -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">E-mail</h5>
-        <span class="email">
-          <i id="envelope" class="bi bi-envelope"></i>
-          <p>
-            @Boleirosmtfodas@gmail.com
-          </p>
-        </span>
-      </div>
-
-
-      <!-- Contato -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Número para contato</h5>
-        <span class="numero">
-          <i id="whatsapp" class="bi bi-whatsapp"></i>
-          <p>
-            83 98892-2922
-          </p>
-        </span>
-      </div>
-    </div>
-  </div>
-</footer>
+  ?>
 
 
 
