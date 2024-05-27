@@ -13,6 +13,7 @@
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body>
@@ -31,8 +32,13 @@
 
 
       <!-- Imagem de Downloud para simular o botão de carregar imagem -->
-      <img id="download" src="Imagens/Group 6.png" alt="simbulo de download">
+      <!-- <img id="download" src="Imagens/Group 6.png" alt="simbulo de download"> -->
 
+      <div id="imgShow">
+        <img src="" alt="" id="imgPreview">
+        <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
+        <input type="file" id="fileInput" style="visibility: hidden;" onchange="previewImage()">
+      </div>
 
       <!-- Começo do Formulario de Cadastro do Bolos -->
       <form action="" method="POST" novalidate>
@@ -84,7 +90,7 @@
 
   
 
-  <!-- Linkagem do -->
+  <!-- Linkagem do Java-->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
 </body>
