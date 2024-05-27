@@ -124,6 +124,10 @@ h1{
 
 
 
-@media screen and (max-width: 500px){body{background-color: red !important;}}
+@media screen and (max-width: 700px){
+    
+    body {background-color: red !important;}
+
+}
 
 
