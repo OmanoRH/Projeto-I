@@ -117,3 +117,19 @@ p{
 h1{
     text-align: center;
 }
+
+.barraPesquisa{
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 500px)
+{
+	
+    body{
+        background-color: red !important;
+    }
+}
+
+
