@@ -49,6 +49,7 @@
           aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
+
         <div class="carousel-item active mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
             alt="...">
@@ -59,15 +60,18 @@
           </div>
         </div>
 
-        <div class="carousel-item mt-3">
-          <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
-            alt="...">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Bolo de Cenoura</h5>
-            <p>Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista
-              o coração de todos!.</p>
+        <a href="paginaReceita.php">
+
+          <div class="carousel-item mt-3">
+            <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
+              alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bolo de Cenoura</h5>
+              <p>Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista
+                o coração de todos!.</p>
+            </div>
           </div>
-        </div>
+        </a>
 
         <div class="carousel-item">
           <img id="bolo" src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;"
@@ -96,7 +100,7 @@
 
   
   <!-- cards -->
-  <div class="container">
+  <div class="container" onchange="resolucao">
     <div class="row" id="cards">
       <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
 

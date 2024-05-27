@@ -61,19 +61,7 @@
           <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
       
-        <div class="mb-3 mt-5">
-          <label for="exampleFormControlTextarea1" class="form-label">Faça uma lista dos Igredientes
-            necessários:</label>
-          <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
       
-      
-        <div class="mb-3 mt-5">
-          <label for="exampleFormControlTextarea1" class="form-label">Descreva o Modo de Preparo do Bolo Usando os
-            Ingredientes:</label>
-          <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        
         <div class="mb-3 mt-5">
           <label for="exampleFormControlTextarea1" class="form-label">Descreva o Modo de Preparo do Bolo Usando os
             Ingredientes:</label>
