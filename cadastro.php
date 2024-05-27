@@ -35,16 +35,16 @@
 
 
       <!-- Começo do Formulario de Cadastro do Bolos -->
-      <form>
+      <form action="" method="POST" novalidate>
 
 
         <!-- Seleção do Tipo de Bolo que será cadastrado -->
         <div class="form-floating mb-3">
           <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
             <option selected>Selecione o tipo de Bolo da sua Receita</option>
-            <option value="1">Bolo Gourmet</option>
-            <option value="2">Bolo Vulcão</option>
-            <option value="3">Bolo Caseiro</option>
+            <option name="gourmet" value="1">Bolo Gourmet</option>
+            <option name="vulcao" value="2">Bolo Vulcão</option>
+            <option name="caseiro" value="3">Bolo Caseiro</option>
           </select>
           <label for="floatingSelect">Tipo de Bolo</label>
         </div>
@@ -53,7 +53,7 @@
 
         <!-- Cadastro do Nome do Bolo -->
         <label for="NomeDoBolo">Nome do Bolo:</label>
-        <input class="form-control" required id="NomeDoBolo" type="text" placeholder="Coloque aqui o nome do seu Bolo" aria-label="default input example">
+        <input name="NomeDoBolo" class="form-control" required  type="text" placeholder="Coloque aqui o nome do seu Bolo" aria-label="default input example">
 
         <div class="mb-3 mt-5">
           <label for="exampleFormControlTextarea1" class="form-label">Faça uma lista dos Igredientes
