@@ -105,7 +105,7 @@
       <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
 
 
-      <div class="col-4" id="cartaz">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -119,7 +119,7 @@
       </div>
 
 
-      <div class="col-4" id="cartaz2">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -133,7 +133,7 @@
       </div>
 
 
-      <div class="col-4" id="cartaz3">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
