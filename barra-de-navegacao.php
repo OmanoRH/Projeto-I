@@ -38,13 +38,15 @@
 
 
         <!-- Barra de Pesquisa -->
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
+        <div class="barraPesquisa">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
 
 
-          <!-- Botão de Busca -->
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+            <!-- Botão de Busca -->
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
 
 
         <!-- Botão de Cadastro de Bolos -->

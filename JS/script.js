@@ -1,3 +1,4 @@
+
 function previewImage(){
 
     var oFReader = new FileReader();
