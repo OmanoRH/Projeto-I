@@ -48,11 +48,11 @@
           </form>
         </div>
 
-
         <!-- Botão de Cadastro de Bolos -->
         <div id="cadastro">
           <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
         </div>
+
       </div>
   </nav>
   <!-- FIm da Barra de Navegação -->
