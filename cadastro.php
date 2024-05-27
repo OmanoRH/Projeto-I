@@ -27,7 +27,7 @@
 
   <?php
     if($_POST['nomeDoBolo'] == "POST"){
-      $selecioneTipoBolo = $_POST['selecioneTipoBolo'];
+     
       $gourmet = $_POST['gourmet'];
       $vulcao = $_POST['vulcao'];
       $caseiro = $_POST['caseiro'];
@@ -37,33 +37,11 @@
       $preparoCalda = $_POST['preparoCalda'];
       $preparoMassa = $_POST['preparoMassa'];
 
-      //texto selecione tipo de bolo
-      if(empty($selecioneTipoBolo)){
-        $erroTipoBolo = "Por Favor, insira um dos tipo de bolo";
-      } else {
-        $erroTipoBolo = "Nenhum";
-      }
-
-
-      //verificação dropdown gourmet
-      if(empty($gourmet)){
-        $erroGourmet = "Por favor, insira um dos tipos de bolo";
-      } else {
-        $erroGourmet = "Nenhum";
-      }
-
-      //dropdown vulcao
-      if(empty($vulcao)){
-        $erroVulcao = "Por Favor, insira um dos tipo de bolo";
-      } else {
-        $erroVulcao = "Nenhum";
-      }
       
-      //dropdown caseiro
-      if(empty($caseiro)){
-        $erroCaseiro = "Por Favor, insira um dos tipo de bolo";
-      } else {
-        $erroCaseiro = "Nenhum";
+      if($_POST['selecioneTipoBolo']){
+        $erroTipoBolo = "Por Favor, insira um dos tipo de bolo";
+      }else {
+        $erroTipoBolo = "Nenhum";
       }
 
       //verificação nome do bolo
