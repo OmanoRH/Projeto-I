@@ -83,12 +83,12 @@
     <div class="row">
 
 
-      <!-- Imagem de Downloud para simular o botão de carregar imagem -->
-      <!-- <img id="download" src="Imagens/Group 6.png" alt="simbulo de download"> -->
-
+      <!-- Upload de imagem e preview da imagem -->
       <div id="imgShow">
         <img src="" alt="" id="imgPreview">
+        <!-- Utilizando o label com icone como button para o upload da imagem  -->
         <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
+                                    <!-- Atributo para que o input fique escondido-->
         <input type="file" id="fileInput" style="visibility: hidden;" onchange="previewImage()">
       </div>
 
