@@ -25,6 +25,7 @@
     
   ?>
 
+  <!-- Começo do Formulario Back-End de Cadastro do Bolos -->
   <?php
     if($_POST['nomeDoBolo'] == "POST"){
      
@@ -76,6 +77,7 @@
 
     }
   ?>
+  <!-- Fim do Formulario Back-End de Cadastro do Bolos -->
 
 
   <!-- Interface -->
@@ -92,12 +94,13 @@
         <input type="file" id="fileInput" style="visibility: hidden;" onchange="previewImage()">
       </div>
 
-      <!-- Começo do Formulario de Cadastro do Bolos -->
+
+      <!-- Começo do Formulario Front-End de Cadastro do Bolos -->
       <form action="" method="POST" novalidate>
 
 
         <!-- Seleção do Tipo de Bolo que será cadastrado -->
-        <div class="form-floating mb-3">
+        <div class="form-floating mt-3 mb-3">
           <select class="form-select <?php if(isset($selecioneTipoBolo)){if($selecioneTipoBolo != "Nenhum"){echo "is-invalid";}} ?> " id="floatingSelect" aria-label="Floating label select example">
             <div class="invalid-feedback">
               <?php
@@ -116,40 +119,59 @@
           <label for="floatingSelect">Tipo de Bolo</label>
         </div>
         
+        
+        <!-- Cadastro Nome do Boleiro -->
+        <div class="mb-3 mt-3">
+          <label for="nomeDoBoleiro">Nome do Boleiro:</label>
+          <input name="nomeDoBoleiro" class="form-control" required  type="text" placeholder="Coloque aqui o nome do Boleiro" aria-label="default input example">
+        </div>
 
-
-        <!-- Cadastro do Nome do Bolo -->
+        <!-- Cadastro Nome do Bolo -->
         <label for="nomeDoBolo">Nome do Bolo:</label>
-        <input name="nomeDoBolo" class="form-control" required  type="text" placeholder="Coloque aqui o nome do seu Bolo" aria-label="default input example">
+        <input name="nomeDoBolo" class="form-control" required  type="text" placeholder="Coloque aqui o nome do Bolo" aria-label="default input example">
+        
 
+        <!-- Cadastro Texto Ingredientes da Massa -->
         <div class="mb-3 mt-5">
           <label for="igredientesMassa" class="form-label">Faça uma lista dos Igredientes necessários para a Massa:</label>
           <textarea name="igredientesMassa" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
       
-      
+        
+        <!-- Cadastro Texto Ingredientes da Calda -->
         <div class="mb-3 mt-5">
           <label for="igredientesCalda" class="form-label">Faça uma lista dos Igredientes necessários para a Calda:</label>
           <textarea name="igredientesCalda" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
+        
+        <!-- Cadastro Texto Preparo da Massa -->
+        <div class="mb-3 mt-5">
+          <label for="preparoMassa" class="form-label">Descreva o Modo de Preparo da Massa:</label>
+          <textarea name="preparoMassa" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
 
+
+        <!-- Cadastro Texto Preparo da Calda -->
         <div class="mb-3 mt-5">
           <label for="preparoCalda" class="form-label">Descreva o Modo de Preparo da Calda:</label>
           <textarea name="preparoCalda" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
+
+        <!-- Cadastro Finalização do Bolo -->
         <div class="mb-3 mt-5">
-          <label for="preparoMassa" class="form-label">Descreva o Modo de Preparo da Massa:</label>
-          <textarea name="preparoMassa" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="finalBolo" class="form-label">Descreva como deve ser Finalizado o Bolo ao Final do Preparo:</label>
+          <textarea name="finalBolo" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-      
+
+        <!-- Botão de Enviar -->
         <div class="mb-3 mt-5">
           <input required onclick="" type="submit" value="Enviar">
         </div>
 
       </form>
-      <!-- FIm do Formulario de Cadastro de Bolos -->
+      <!-- FIm do Formulario Front-End de Cadastro de Bolos -->
 
 
     </div>
