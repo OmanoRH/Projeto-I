@@ -17,12 +17,6 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-          <!-- Botão de Inicio -->
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-          </li>
-
-
           <!-- Lista de Categorias -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
