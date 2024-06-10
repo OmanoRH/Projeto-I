@@ -35,10 +35,13 @@
       $caseiro = $_POST['caseiro'];
       $nomeDoBolo = $_POST['nomeDoBolo'];
       $nomeDoBoleiro = $_POST['nomeDoBoleiro'];
+      $imgPreview = $_POST['imgPreview'];
       $igredientesMassa = $_POST['igredientesMassa'];
       $igredientesCalda = $_POST['igredientesMassa'];
       $preparoCalda = $_POST['preparoCalda'];
       $preparoMassa = $_POST['preparoMassa'];
+
+      $date = date('Y-m-d');
 
       
       if($_POST['selecioneTipoBolo']){
@@ -75,9 +78,9 @@
 
       if($erroTipoBolo == "Nenhum" && $erroGourmet == "Nenhum" && $erroVulcao == "Nenhum" && $erroCaseiro == "Nenhunm" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
         
-        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
-        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
-        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
+        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, '$email','$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', null, null, null);");
+        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$igredientesMassa', '$igredientesCalda');");
+        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$preparoMassa', '$preparoCalda');");
         $sql -> execute();
         
         header("");
@@ -95,7 +98,7 @@
 
       <!-- Upload de imagem e preview da imagem -->
       <div id="imgShow">
-        <img src="" alt="" id="imgPreview">
+        <img src="" alt="" id="imgPreview" name="imgPreview">
         <!-- Utilizando o label com icone como button para o upload da imagem  -->
         <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
                                     <!-- Atributo para que o input fique escondido-->
