@@ -22,6 +22,7 @@
   <?php
 
     require("barra-de-navegacao.php");
+    require("conexao.php")
     
   ?>
 
@@ -33,6 +34,7 @@
       $vulcao = $_POST['vulcao'];
       $caseiro = $_POST['caseiro'];
       $nomeDoBolo = $_POST['nomeDoBolo'];
+      $nomeDoBoleiro = $_POST['nomeDoBoleiro'];
       $igredientesMassa = $_POST['igredientesMassa'];
       $igredientesCalda = $_POST['igredientesMassa'];
       $preparoCalda = $_POST['preparoCalda'];
@@ -72,6 +74,12 @@
       }
 
       if($erroTipoBolo == "Nenhum" && $erroGourmet == "Nenhum" && $erroVulcao == "Nenhum" && $erroCaseiro == "Nenhunm" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
+        
+        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
+        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
+        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$email','$senha', '$reSenha',  '$pNome', '$sNome', '$exp');");
+        $sql -> execute();
+        
         header("");
       }
 
