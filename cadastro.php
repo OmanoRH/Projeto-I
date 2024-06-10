@@ -78,7 +78,7 @@
 
       if($erroTipoBolo == "Nenhum" && $erroGourmet == "Nenhum" && $erroVulcao == "Nenhum" && $erroCaseiro == "Nenhunm" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
         
-        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, '$email','$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', null, null, null);");
+        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null,'$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', null, null, null);");
         $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$igredientesMassa', '$igredientesCalda');");
         $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$preparoMassa', '$preparoCalda');");
         $sql -> execute();
