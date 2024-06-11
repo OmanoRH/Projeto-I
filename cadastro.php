@@ -111,23 +111,25 @@
 
 
         <!-- Seleção do Tipo de Bolo que será cadastrado -->
-        <div class="form-floating mt-3 mb-3">
-          <select class="form-select <?php if(isset($selecioneTipoBolo)){if($selecioneTipoBolo != "Nenhum"){echo "is-invalid";}} ?> " id="floatingSelect" aria-label="Floating label select example">
-            <div class="invalid-feedback">
-              <?php
-                  if(isset($selecioneTipoBolo)){
-                    if($selecioneTipoBolo != "Nenhum"){
-                      echo $selecioneTipoBolo;
-                    }
-                  }                      
-              ?>
-           </div>
-            <option name="selecioneTipoBolo"  selected>Selecione o tipo de Bolo da sua Receita</option>
-            <option name="gourmet" value="1">Bolo Gourmet</option>
-            <option name="vulcao" value="2">Bolo Vulcão</option>
-            <option name="caseiro" value="3">Bolo Caseiro</option>
-          </select>
-          <label for="floatingSelect">Tipo de Bolo</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Bolo Caseiro
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Bolo Gourmet
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+          <label class="form-check-label" for="flexRadioDefault3">
+            Bolo Vulcão
+          </label>
         </div>
         
         
