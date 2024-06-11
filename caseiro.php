@@ -27,7 +27,7 @@
 
   <!-- Interface -->
   <div class="container">
-    <div class="row">
+    <div class="card row">
 
 
       <!-- Titulo da Pagina -->
@@ -40,7 +40,7 @@
       <p class="parag mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Aspernatur iusto officiis, consectetur amet dicta quasi voluptates Voluptatem provident perferendis quia.</p>
 
       <!--Começo dos Cards de Bolo de Cenoura -->
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -54,7 +54,7 @@
       </div>
 
 
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -68,7 +68,7 @@
       </div>
 
 
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -82,7 +82,7 @@
       </div>
 
 
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -96,7 +96,7 @@
       </div>
 
 
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">
@@ -110,7 +110,7 @@
       </div>
 
 
-      <div class="col-4">
+      <div class="cartaz col-4">
         <div class="card mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
           <div class="card-body">

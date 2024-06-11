@@ -100,8 +100,8 @@
 
   
   <!-- cards -->
-  <div class="container" onchange="resolucao">
-    <div class="row" id="cards">
+  <div class="container"> 
+    <div class="card row">
       <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
 
 
