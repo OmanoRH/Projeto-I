@@ -110,7 +110,7 @@
       <form action="" method="POST" novalidate>
 
 
-        <!-- Seleção do Tipo de Bolo que será cadastrado -->
+        <!-- Seleção do Bolo Caseiro -->
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
           <label class="form-check-label" for="flexRadioDefault1">
@@ -118,6 +118,7 @@
           </label>
         </div>
 
+        <!-- Seleção do Bolo Gourmet -->
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
           <label class="form-check-label" for="flexRadioDefault2">
@@ -125,10 +126,19 @@
           </label>
         </div>
 
+        <!-- Seleção do Bolo Vulcão -->
         <div class="form-check">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
           <label class="form-check-label" for="flexRadioDefault3">
             Bolo Vulcão
+          </label>
+        </div>
+
+        <!-- Selecão Padrão -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+          <label class="form-check-label" for="flexRadioDefault4">
+            Selecione o Tipo de Bolo da sua Receita
           </label>
         </div>
         
