@@ -111,7 +111,7 @@
 
 
         <!-- Seleção do Bolo Caseiro -->
-        <div class="form-check">
+        <div class="form-check mt-3">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
           <label class="form-check-label" for="flexRadioDefault1">
             Bolo Caseiro
@@ -135,7 +135,7 @@
         </div>
 
         <!-- Selecão Padrão -->
-        <div class="form-check">
+        <div class="form-check mb-3">
           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
           <label class="form-check-label" for="flexRadioDefault4">
             Selecione o Tipo de Bolo da sua Receita
