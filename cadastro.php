@@ -28,7 +28,7 @@
 
   <!-- Começo do Formulario Back-End de Cadastro do Bolos -->
   <?php
-    if($_POST['nomeDoBolo'] == "POST"){
+    if($_POST['REQUEST_METHOD'] == "POST"){
      
       $gourmet = $_POST['gourmet'];
       $vulcao = $_POST['vulcao'];
