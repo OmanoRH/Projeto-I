@@ -30,9 +30,7 @@
   <?php
     if($_POST['nomeDoBolo'] == "POST"){
      
-      $gourmet = $_POST['gourmet'];
-      $vulcao = $_POST['vulcao'];
-      $caseiro = $_POST['caseiro'];
+      $tipoBolo = $_POST['tipoBolo'];
       $nomeDoBolo = $_POST['nomeDoBolo'];
       $nomeDoBoleiro = $_POST['nomeDoBoleiro'];
       $imgPreview = $_POST['imgPreview'];
@@ -78,7 +76,7 @@
 
       if($erroTipoBolo == "Nenhum" && $erroGourmet == "Nenhum" && $erroVulcao == "Nenhum" && $erroCaseiro == "Nenhunm" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
         
-        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null,'$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', null, null, null);");
+        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null,'$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', $tipoBolo, null, null);");
         $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$igredientesMassa', '$igredientesCalda');");
         $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$preparoMassa', '$preparoCalda');");
         $sql -> execute();
@@ -110,39 +108,22 @@
       <form action="" method="POST" novalidate>
 
 
-        <!-- Seleção do Bolo Caseiro -->
-        <div class="form-check mt-3">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Bolo Caseiro
-          </label>
+        <!-- Seleção do Tipo de Bolo -->
+        <div class="form-check mt-3" name="radioSelect">
+
+          <p style="text-align: start;" class="mb-0">Tipo do bolo: </p>
+
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo1">
+          <label class="form-check-label" for="tipoBolo1"> Bolo Caseiro </label><br>
+
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo2" checked>
+          <label class="form-check-label" for="tipoBolo2"> Bolo Gourmet </label><br>
+          
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo3" checked>
+          <label class="form-check-label" for="tipoBolo3"> Bolo Vulcão </label>
+
         </div>
 
-        <!-- Seleção do Bolo Gourmet -->
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Bolo Gourmet
-          </label>
-        </div>
-
-        <!-- Seleção do Bolo Vulcão -->
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-          <label class="form-check-label" for="flexRadioDefault3">
-            Bolo Vulcão
-          </label>
-        </div>
-
-        <!-- Selecão Padrão -->
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
-          <label class="form-check-label" for="flexRadioDefault4">
-            Selecione o Tipo de Bolo da sua Receita
-          </label>
-        </div>
-        
-        
         <!-- Cadastro Nome do Boleiro -->
         <div class="mb-3 mt-3">
           <label for="nomeDoBoleiro">Nome do Boleiro:</label>
