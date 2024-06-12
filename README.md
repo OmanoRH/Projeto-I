@@ -1,1 +1,1 @@
-Add essa cor no css do boot --bs-body-bg:#FFDEAD;
+Se vc leu vc é gay

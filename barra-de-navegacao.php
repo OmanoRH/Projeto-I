@@ -41,12 +41,16 @@
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
         </div>
-
+        
         <!-- Botão de Cadastro de Bolos -->
-        <div id="cadastro">
+        <!-- <div id="cadastro">
           <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
+        </div> -->
+        <div id="cadastro">
+          <form class="container-fluid justify-content-start">
+            <a href="cadastro.php"><button class="btn btn-outline-success me-2" type="button">Cadastre seu Bolo</button></a>
+          </form>
         </div>
-
       </div>
   </nav>
   <!-- FIm da Barra de Navegação -->
