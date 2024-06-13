@@ -28,12 +28,12 @@
 
   <!-- Começo do Formulario Back-End de Cadastro do Bolos -->
   <?php
-    if($_POST['REQUEST_METHOD'] == "POST"){
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
      
       $tipoBolo = $_POST['tipoBolo'];
       $nomeDoBolo = $_POST['nomeDoBolo'];
       $nomeDoBoleiro = $_POST['nomeDoBoleiro'];
-      $imgPreview = $_POST['imgPreview'];
+      $imgPreview = $_POST['imgPreview']; //ESSA VARIAVEL ESTÁ DANDO ERRO
       $igredientesMassa = $_POST['igredientesMassa'];
       $igredientesCalda = $_POST['igredientesMassa'];
       $preparoCalda = $_POST['preparoCalda'];
@@ -41,10 +41,10 @@
 
       $date = date('Y-m-d');
 
-      
-      if($_POST['selecioneTipoBolo']){
+
+      if (empty($tipoBolo)){
         $erroTipoBolo = "Por Favor, insira um dos tipo de bolo";
-      }else {
+      } else {
         $erroTipoBolo = "Nenhum";
       }
 
@@ -74,12 +74,16 @@
         $erroPreparoMassa = "Nenhum";
       }
 
-      if($erroTipoBolo == "Nenhum" && $erroGourmet == "Nenhum" && $erroVulcao == "Nenhum" && $erroCaseiro == "Nenhunm" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
+      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
         
-        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null,'$imgPreview', '$nomeDoBolo', '$nomeDoBoleiro','$date', $tipoBolo, null, null);");
-        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, '$igredientesMassa', '$igredientesCalda');");
-        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, '$preparoMassa', '$preparoCalda');");
-        $sql -> execute();
+        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
+        $sql -> execute([$imgPreview, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
+
+        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
+        $sql -> execute([$igredientesMassa, $igredientesCalda]);
+
+        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
+        $sql -> execute([$preparoMassa, $preparoCalda]);
         
         header("");
       }
