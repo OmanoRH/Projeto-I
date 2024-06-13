@@ -37,6 +37,7 @@
       $igredientesCalda = $_POST['igredientesMassa'];
       $preparoCalda = $_POST['preparoCalda'];
       $preparoMassa = $_POST['preparoMassa'];
+      $finalizacaoBolo = $_POST['finalBolo'];
       $date = date('Y-m-d');
 
 
@@ -91,7 +92,14 @@
         $erroPreparoMassa = "Nenhum";
       }
 
-      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum"){
+      if(empty($finalizacaoBolo)){
+        $erroFinalBolo = "Por favor, descreva como o bolo deve ser finalizado";
+      } else {
+        $erroFinalBolo = "Nenhum";
+      }
+
+
+      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
         
         $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
         $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
@@ -125,9 +133,19 @@
         <div id="imgShow">
           <img src="" alt="" id="imgPreview">
           <!-- Utilizando o label com icone como button para o upload da imagem  -->
-          <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
+          <label for="fileInput"><span class="mdi mdi-file-upload <?php if(isset($erroimgPreview)){if($erroimgPreview != "Nenhum"){echo "is-invalid";}} ?> " id="icon"></span></label>
                                       <!-- Atributo para que o input fique escondido-->
           <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
+          <div class="invalid-feedback">
+            <?php
+              if(isset($erroimgPreview)){
+                if($erroimgPreview != "Nenhum"){
+                  echo $erroimgPreview; //Código com erro
+                }
+              }                      
+            ?>
+          </div> 
+
         </div>
 
         <!-- Seleção do Tipo de Bolo -->
@@ -142,26 +160,52 @@
           <label class="form-check-label" for="tipoBolo2"> Bolo Gourmet </label><br>
                 
           <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo3" value="Bolo Vulcão">
-          <label class="form-check-label" for="tipoBolo3"> Bolo Vulcão </label>
-
+          <label class="form-check-label <?php if(isset($erroTipoBolo)){if($erroTipoBolo != "Nenhum"){echo "is-invalid";}} ?> " for="tipoBolo3"> Bolo Vulcão </label>
+          <div class="invalid-feedback">
+            <?php
+              if(isset($erroTipoBolo)){
+                if($erroTipoBolo != "Nenhum"){ //Código com erro
+                  echo $erroTipoBolo;
+                }
+              }                      
+            ?>
+          </div> 
 
         </div>
 
         <!-- Cadastro Nome do Boleiro -->
         <div class="mb-3 mt-3">
           <label for="nomeDoBoleiro">Nome do Boleiro:</label>
-          <input name="nomeDoBoleiro" class="form-control" required  type="text" placeholder="Coloque aqui o nome do Boleiro" aria-label="default input example">
+          <input name="nomeDoBoleiro" class="form-control " required  type="text" placeholder="Coloque aqui o nome do Boleiro" aria-label="default input example">
         </div>
 
         <!-- Cadastro Nome do Bolo -->
         <label for="nomeDoBolo">Nome do Bolo:</label>
-        <input name="nomeDoBolo" class="form-control" required  type="text" placeholder="Coloque aqui o nome do Bolo" aria-label="default input example">
+        <input name="nomeDoBolo" class="form-control <?php if(isset($erroNome)){if($erroNome != "Nenhum"){echo "is-invalid";}} ?>" required  type="text" placeholder="Coloque aqui o nome do Bolo" aria-label="default input example">
+        <div class="invalid-feedback">
+          <?php
+            if(isset($erroNome)){
+              if($erroNome != "Nenhum"){
+                  echo $erroNome;
+                }
+              }                      
+            ?>
+        </div> 
         
 
         <!-- Cadastro Texto Ingredientes da Massa -->
         <div class="mb-3 mt-5">
           <label for="igredientesMassa" class="form-label">Faça uma lista dos Igredientes necessários para a Massa:</label>
-          <textarea name="igredientesMassa" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea name="igredientesMassa" required class="form-control <?php if(isset($erroIgredientesMassa)){if($erroIgredientesMassa != "Nenhum"){echo "is-invalid";}} ?>" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="invalid-feedback">
+            <?php
+              if(isset($erroIgredientesMassa)){
+                if($erroIgredientesMassa != "Nenhum"){
+                  echo $erroIgredientesMassa;
+                }
+              }                      
+            ?>
+          </div> 
         </div>
       
         
@@ -175,7 +219,16 @@
         <!-- Cadastro Texto Preparo da Massa -->
         <div class="mb-3 mt-5">
           <label for="preparoMassa" class="form-label">Descreva o Modo de Preparo da Massa:</label>
-          <textarea name="preparoMassa" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea name="preparoMassa" required class="form-control <?php if(isset($erroPreparoMassa)){if($erroPreparoMassa != "Nenhum"){echo "is-invalid";}} ?>" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="invalid-feedback">
+            <?php
+              if(isset($erroPreparoMassa)){
+                if($erroPreparoMassa != "Nenhum"){
+                  echo $erroPreparoMassa;
+                }
+              }                      
+            ?>
+          </div> 
         </div>
 
 
@@ -188,8 +241,17 @@
 
         <!-- Cadastro Finalização do Bolo -->
         <div class="mb-3 mt-5">
-          <label for="finalBolo" class="form-label">Descreva como deve ser Finalizado o Bolo ao Final do Preparo:</label>
-          <textarea name="finalBolo" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="finalBolo" class="form-label ">Descreva como deve ser Finalizado o Bolo ao Final do Preparo:</label>
+          <textarea name="finalBolo" required class="form-control <?php if(isset($erroFinalBolo)){if($erroFinalBolo != "Nenhum"){echo "is-invalid";}} ?>" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <div class="invalid-feedback">
+            <?php
+              if(isset($erroFinalBolo)){
+                if($erroFinalBolo != "Nenhum"){
+                  echo $erroFinalBolo;
+                }
+              }                      
+            ?>
+          </div> 
         </div>
 
         <!-- Botão de Enviar -->
