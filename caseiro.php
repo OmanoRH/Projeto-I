@@ -27,7 +27,7 @@
 
   <!-- Interface -->
   <div class="container">
-    <div class="card row">
+    <div class="row">
 
 
       <!-- Titulo da Pagina -->
@@ -126,20 +126,14 @@
   </div>
   <!-- Fim dos Cards de Bolo de Cenoura -->
 
+    <!-- Rodapé do Site -->
+    <?php
+      require("rodape.php");
+    ?>
 
   <!-- Linkagem do JS -->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
 </body>
-
-
-  <!-- Rodapé do Site -->
-  <?php
-
-    require("rodape.php")
-
-  ?>
-
-
 
 </html>

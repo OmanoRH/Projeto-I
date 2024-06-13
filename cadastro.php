@@ -13,7 +13,6 @@
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body>
@@ -206,21 +205,15 @@
 
 
 
-  
+    <!-- Rodapé do Site -->
+    <?php
+      require("rodape.php");
+    ?>
 
   <!-- Linkagem do Java-->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
+  
 </body>
-
-
-  <!-- Rodapé do Site -->
-  <?php
-
-    require("rodape.php")
-
-  ?>
-
-
 
 </html>

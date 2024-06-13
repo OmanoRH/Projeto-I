@@ -13,6 +13,7 @@
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body>
@@ -101,7 +102,7 @@
   
   <!-- cards -->
   <div class="container"> 
-    <div class="card row">
+    <div class="row">
       <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
 
 
@@ -150,18 +151,15 @@
   <!-- fim dos cards -->
 
 
+    <!-- Rodapé do Site  -->
+     <?php 
+      require ("rodape.php");
+     ?>
+ 
+
   <!-- Linkagem do JS -->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
-</body>
-
-  <!-- Rodapé do Site -->
-  <?php
-
-    require("rodape.php")
-
-  ?>
-
-
+</body> 
 
 </html>
