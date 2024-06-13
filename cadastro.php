@@ -33,13 +33,30 @@
       $tipoBolo = $_POST['tipoBolo'];
       $nomeDoBolo = $_POST['nomeDoBolo'];
       $nomeDoBoleiro = $_POST['nomeDoBoleiro'];
-      $imgPreview = $_POST['imgPreview']; //ESSA VARIAVEL ESTÁ DANDO ERRO
       $igredientesMassa = $_POST['igredientesMassa'];
       $igredientesCalda = $_POST['igredientesMassa'];
       $preparoCalda = $_POST['preparoCalda'];
       $preparoMassa = $_POST['preparoMassa'];
-
       $date = date('Y-m-d');
+
+
+      //Upload da imagem
+      $imgPreview = $_FILES['imgPreview']['tmp_name'];//tmp_name é um nome temporario para o arquivo
+      $imgPreviewType = $_FILES['imgPreview']['type'];
+
+
+      $imgData = file_get_contents($imgPreview);// Lê o conteudo da imagem
+
+      $imgBase64 = base64_encode($imgData);//Converte os dados da imagem em base64 encoded string
+
+      
+
+
+      if(empty($imgPreview)){
+        $erroimgPreview = "Por favor, escolha uma imagem";
+      } else {
+        $erroimgPreview = "Nenhum";
+      }
 
 
       if (empty($tipoBolo)){
@@ -74,10 +91,10 @@
         $erroPreparoMassa = "Nenhum";
       }
 
-      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum"){
+      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum"){
         
         $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
-        $sql -> execute([$imgPreview, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
+        $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
 
         $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
         $sql -> execute([$igredientesMassa, $igredientesCalda]);
@@ -98,33 +115,35 @@
     <div class="row">
 
 
-      <!-- Upload de imagem e preview da imagem -->
-      <div id="imgShow">
-        <img src="" alt="" id="imgPreview">
-        <!-- Utilizando o label com icone como button para o upload da imagem  -->
-        <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
-                                    <!-- Atributo para que o input fique escondido-->
-        <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
-      </div>
+      
 
 
       <!-- Começo do Formulario Front-End de Cadastro do Bolos -->
-      <form action="" method="POST" novalidate>
+      <form action="" method="POST" novalidate enctype="multipart/form-data">
 
+        <!-- Upload de imagem e preview da imagem -->
+        <div id="imgShow">
+          <img src="" alt="" id="imgPreview">
+          <!-- Utilizando o label com icone como button para o upload da imagem  -->
+          <label for="fileInput"><span class="mdi mdi-file-upload" id="icon"></span></label>
+                                      <!-- Atributo para que o input fique escondido-->
+          <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
+        </div>
 
         <!-- Seleção do Tipo de Bolo -->
         <div class="form-check mt-3" name="radioSelect">
 
           <p style="text-align: start;" class="mb-0">Tipo do bolo: </p>
 
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo1">
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo1" value="Bolo Caseiro">
           <label class="form-check-label" for="tipoBolo1"> Bolo Caseiro </label><br>
-
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo2" checked>
+            
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo2" value="Bolo Gourmet">
           <label class="form-check-label" for="tipoBolo2"> Bolo Gourmet </label><br>
-          
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo3" checked>
+                
+          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo3" value="Bolo Vulcão">
           <label class="form-check-label" for="tipoBolo3"> Bolo Vulcão </label>
+
 
         </div>
 
