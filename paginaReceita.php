@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!-- TItulo -->
-    <title>Receita</title>
+  <!-- TItulo -->
+  <title>Receita</title>
 
 
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
 
 
   <!-- Linkagem do Icones no Bootstrap -->
@@ -22,6 +22,8 @@
 </head>
 
 <body>
+
+  <?php require ("barra-de-navegacao.php"); ?>
 
   <!-- Conexão com o Banco -->
   <?php
@@ -40,14 +42,11 @@
     $sql->execute();
     $dadosP = $sql->fetchAll();
 
-
-    
-    
   ?>
 
   <!-- Imagem da recdeita -->
   <div class="container">
-    <div class="banner">
+    <div class="row">
       
       <?php
 
@@ -61,7 +60,7 @@
                 break;
             }
           }
-          echo '<img class="img-bolodecenoura" src="data:image/png;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
+          echo '<img class="img-bolodecenoura" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
         }
       ?>  
 

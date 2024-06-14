@@ -1,14 +1,9 @@
 
-#imgShow{
-    display: flex;
-    height: 250px;
-    width: 250px;
-    margin-left: 12px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-}
+ #fotoBolo{
+
+    text-align: left;
+    height: 10px !important;
+ }
 
 #icon{
     margin-top: 50%;
