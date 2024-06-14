@@ -25,7 +25,7 @@
     require("conexao.php");
     require("barra-de-navegacao.php");
 
-    $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 13");
+    $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
     $sql->execute();
     $dadosB = $sql->fetchAll();
 
@@ -49,8 +49,8 @@
       <?php
 
         foreach($dadosB as $row){
-          // Attempt decoding with different image types until successful
-          $imageTypes = ['jpeg', 'png', 'gif']; // Add more types if needed
+          // Tenta decodificar com diferentes tipos deimagem até sucesso
+          $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
           foreach ($imageTypes as $type) {
             $decoded = base64_decode($row['img_bolo'], true);
             if ($decoded !== false) {
