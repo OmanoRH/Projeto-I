@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+  <!-- TItulo -->
+  <title>Receita</title>
+
+
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
 
 
   <!-- Linkagem do Icones no Bootstrap -->
@@ -19,11 +23,12 @@
 
 <body>
 
-  <!-- Barra de Navegação -->
+  <?php require ("barra-de-navegacao.php"); ?>
+
+  <!-- Conexão com o Banco -->
   <?php
 
     require("conexao.php");
-    require("barra-de-navegacao.php");
 
     $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
     $sql->execute();
@@ -36,18 +41,28 @@
     $sql = $pdo -> prepare("SELECT * FROM preparo WHERE id_preparo = 1");
     $sql->execute();
     $dadosP = $sql->fetchAll();
-    
+
   ?>
 
   <!-- Imagem da recdeita -->
   <div class="container">
-    <div class="banner">
+    <div class="row">
       
       <?php
-        foreach($dadosB as $valueImg){
-          echo '<img class="img-bolodecenoura" src="get_image.php?id=' . $valueImg['img_bolo'] . '" alt="bolo de cenoura">';
+
+        foreach($dadosB as $row){
+          // Tenta decodificar com diferentes tipos deimagem até sucesso
+          $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
+          foreach ($imageTypes as $type) {
+            $decoded = base64_decode($row['img_bolo'], true);
+            if ($decoded !== false) {
+                $imgData = $decoded;
+                break;
+            }
+          }
+          echo '<img class="img-bolodecenoura" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
         }
-      ?>
+      ?>  
 
       <!-- título principal -->
       <div class="title">
