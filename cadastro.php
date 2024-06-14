@@ -50,19 +50,16 @@
       $imgBase64 = base64_encode($imgData);//Converte os dados da imagem em base64 encoded string
 
       
-
-
-      if(empty($imgPreview)){
-        $erroimgPreview = "Por favor, escolha uma imagem";
-      } else {
-        $erroimgPreview = "Nenhum";
-      }
-
-
       if (empty($tipoBolo)){
         $erroTipoBolo = "Por Favor, insira um dos tipo de bolo";
       } else {
         $erroTipoBolo = "Nenhum";
+      }
+      
+      if(empty($imgPreview)){
+        $erroimgPreview = "Por favor, escolha uma imagem";
+      } else {
+        $erroimgPreview = "Nenhum";
       }
 
       //verificação nome do bolo
@@ -97,20 +94,21 @@
         $erroFinalBolo = "Nenhum";
       }
 
+      var_dump($imgPreview);
 
-      if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
+      // if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
         
-        $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
-        $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
+      //   $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
+      //   $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
 
-        $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
-        $sql -> execute([$igredientesMassa, $igredientesCalda]);
+      //   $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
+      //   $sql -> execute([$igredientesMassa, $igredientesCalda]);
 
-        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
-        $sql -> execute([$preparoMassa, $preparoCalda]);
+      //   $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
+      //   $sql -> execute([$preparoMassa, $preparoCalda]);
         
-        header("");
-      }
+      //   header("");
+      // }
 
     }
   ?>
@@ -132,7 +130,7 @@
         <div id="imgShow">
           <img src="" alt="" id="imgPreview">
           <!-- Utilizando o label com icone como button para o upload da imagem  -->
-          <label for="fileInput"><span class="mdi mdi-file-upload <?php if(isset($erroimgPreview)){if($erroimgPreview != "Nenhum"){echo "is-invalid";}} ?> " id="icon"></span></label>
+          <label for="fileInput"><span class="mdi mdi-file-upload " id="icon"></span></label>
                                       <!-- Atributo para que o input fique escondido-->
           <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
           <div class="invalid-feedback">
@@ -152,14 +150,14 @@
 
           <p style="text-align: start;" class="mb-0">Tipo do bolo: </p>
 
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo1" value="Bolo Caseiro">
+          <input class="form-check-input <?php if(isset($erroTipoBolo)){if($erroTipoBolo != "Nenhum"){echo "is-invalid";}} ?>" type="radio" name="tipoBolo" id="tipoBolo1" value="Bolo Caseiro" checked>
           <label class="form-check-label" for="tipoBolo1"> Bolo Caseiro </label><br>
             
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo2" value="Bolo Gourmet">
+          <input class="form-check-input <?php if(isset($erroTipoBolo)){if($erroTipoBolo != "Nenhum"){echo "is-invalid";}} ?> " type="radio" name="tipoBolo" id="tipoBolo2" value="Bolo Gourmet">
           <label class="form-check-label" for="tipoBolo2"> Bolo Gourmet </label><br>
                 
-          <input class="form-check-input" type="radio" name="tipoBolo" id="tipoBolo3" value="Bolo Vulcão">
-          <label class="form-check-label <?php if(isset($erroTipoBolo)){if($erroTipoBolo != "Nenhum"){echo "is-invalid";}} ?> " for="tipoBolo3"> Bolo Vulcão </label>
+          <input class="form-check-input <?php if(isset($erroTipoBolo)){if($erroTipoBolo != "Nenhum"){echo "is-invalid";}} ?>" type="radio" name="tipoBolo" id="tipoBolo3" value="Bolo Vulcão">
+          <label class="form-check-label" for="tipoBolo3"> Bolo Vulcão </label>
           <div class="invalid-feedback">
             <?php
               if(isset($erroTipoBolo)){
