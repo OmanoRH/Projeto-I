@@ -39,6 +39,9 @@
     $sql = $pdo -> prepare("SELECT * FROM preparo WHERE id_preparo = 1");
     $sql->execute();
     $dadosP = $sql->fetchAll();
+
+
+    
     
   ?>
 
@@ -47,10 +50,20 @@
     <div class="banner">
       
       <?php
-        foreach($dadosB as $valueImg){
-          echo '<img class="img-bolodecenoura" src="get_image.php?id=' . $valueImg['img_bolo'] . '" alt="bolo de cenoura">';
+
+        foreach($dadosB as $row){
+          // Tenta decodificar com diferentes tipos deimagem até sucesso
+          $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
+          foreach ($imageTypes as $type) {
+            $decoded = base64_decode($row['img_bolo'], true);
+            if ($decoded !== false) {
+                $imgData = $decoded;
+                break;
+            }
+          }
+          echo '<img class="img-bolodecenoura" src="data:image/png;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
         }
-      ?>
+      ?>  
 
       <!-- título principal -->
       <div class="title">
