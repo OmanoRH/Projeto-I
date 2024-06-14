@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- TItulo -->
+    <title>Receita</title>
+
+
   <!-- Linkagem do CSS -->
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="stylesheet" href="Css/bootstrap.min.css">
@@ -19,11 +23,10 @@
 
 <body>
 
-  <!-- Barra de Navegação -->
+  <!-- Conexão com o Banco -->
   <?php
 
     require("conexao.php");
-    require("barra-de-navegacao.php");
 
     $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
     $sql->execute();
