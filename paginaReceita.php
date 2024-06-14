@@ -25,7 +25,7 @@
     require("conexao.php");
     require("barra-de-navegacao.php");
 
-    $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
+    $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 13");
     $sql->execute();
     $dadosB = $sql->fetchAll();
 
@@ -36,6 +36,9 @@
     $sql = $pdo -> prepare("SELECT * FROM preparo WHERE id_preparo = 1");
     $sql->execute();
     $dadosP = $sql->fetchAll();
+
+
+    
     
   ?>
 
@@ -44,10 +47,20 @@
     <div class="banner">
       
       <?php
-        foreach($dadosB as $valueImg){
-          echo '<img class="img-bolodecenoura" src="get_image.php?id=' . $valueImg['img_bolo'] . '" alt="bolo de cenoura">';
+
+        foreach($dadosB as $row){
+          // Attempt decoding with different image types until successful
+          $imageTypes = ['jpeg', 'png', 'gif']; // Add more types if needed
+          foreach ($imageTypes as $type) {
+            $decoded = base64_decode($row['img_bolo'], true);
+            if ($decoded !== false) {
+                $imgData = $decoded;
+                break;
+            }
+          }
+          echo '<img class="img-bolodecenoura" src="data:image/png;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
         }
-      ?>
+      ?>  
 
       <!-- título principal -->
       <div class="title">
