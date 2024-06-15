@@ -22,26 +22,7 @@
 
         <!-- Barra de Navegação -->
          <?php require("barra-de-navegacao.php") ?>
-    
-    
-         <!-- Conexão com o Banco de Dados -->
-          <?php 
-
-            require("conexao.php");
-
-            $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
-            $sql->execute();
-            $dadosB = $sql->fetchAll();
-        
-            $sql = $pdo -> prepare("SELECT * FROM ingredientes WHERE id_ingredientes = 1");
-            $sql->execute();
-            $dadosI = $sql->fetchAll();
-        
-            $sql = $pdo -> prepare("SELECT * FROM preparo WHERE id_preparo = 1");
-            $sql->execute();
-            $dadosP = $sql->fetchAll();
-
-          ?>
+         
     
         <div class="container">
             <div class="">
