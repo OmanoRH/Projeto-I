@@ -33,14 +33,10 @@
     Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
     <!-- Rodapé do Site  -->
 
-    <div style="position: fixed; bottom: 0; width: 100%;">
-
         <?php 
          require ("rodape.php");
         ?>
 
-    </div>
-    
     
 
     <!-- Linkagem do JS -->
