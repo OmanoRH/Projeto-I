@@ -96,19 +96,19 @@
 
       var_dump($imgPreview);
 
-      // if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
+       if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
         
-      //   $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
-      //   $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
+         $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
+         $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);
 
-      //   $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
-      //   $sql -> execute([$igredientesMassa, $igredientesCalda]);
+         $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
+         $sql -> execute([$igredientesMassa, $igredientesCalda]);
 
-      //   $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
-      //   $sql -> execute([$preparoMassa, $preparoCalda]);
+        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
+         $sql -> execute([$preparoMassa, $preparoCalda]);
         
-      //   header("");
-      // }
+         header("");
+       }
 
     }
   ?>
@@ -161,7 +161,7 @@
           <div class="invalid-feedback">
             <?php
               if(isset($erroTipoBolo)){
-                if($erroTipoBolo != "Nenhum"){ //Código com erro
+                if($erroTipoBolo != "Nenhum"){ //Código totalmente inútil?
                   echo $erroTipoBolo;
                 }
               }                      
