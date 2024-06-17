@@ -44,10 +44,7 @@
 
   ?>
 
-  <!-- Imagem da recdeita -->
-  <div class="container">
-    <div class="row">
-      
+  <!-- Imagem da receita -->
       <?php
 
         foreach($dadosB as $row){
@@ -64,6 +61,11 @@
         }
       ?>  
 
+
+  <div class="container">
+    <div class="row">
+      
+
       <!-- título principal -->
       <div class="title">
         <?php
@@ -73,67 +75,88 @@
         ?>
         
       </div>
-
-        <!-- card da receita massa -->
-      <div id="c1" class="card">
-        <h2>Igredientes da massa</h2>
-
-        <?php
-        
-          foreach($dadosI as $valueMassa){
-            echo  "<ul class='list'>
-                      <li>$valueMassa[ingredientes_massa]</li>
-                    </ul>";
-          }
-        
-        ?>
         
       </div>
 
         <!-- card da receita calda -->
-      <div id="c2" class="card">
-        <h2>Igredientes da calda</h2>
-          <?php
-
-            foreach($dadosI as $valueCalda){
-              echo  "<ul class='list'>
-                        <li>$valueCalda[ingredientes_calda]</li>
-                      </ul>";
-            }
-          
-          ?>
+        <div class="cartaz col-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Igredientes da Massa</h2>
+            <p class="card-text">
+              <?php
+        
+                foreach($dadosI as $valueMassa){
+                  echo  "<ul class='list'>
+                            <li>$valueMassa[ingredientes_massa]</li>
+                          </ul>";
+                }
+              
+              ?>
+              </p>
+          </div>
+        </div>
       </div>
-
-        <!-- card duplo do modo de preparo e finalização -->
-      <div id="c3" class="card">
-        <h2>Modo de preparo da massa</h2>
-          <?php
-
-            foreach($dadosP as $valuePM){
-              echo  "<ul class='list'>
-                        <li>$valuePM[preparo_massa]</li>
-                      </ul>";
-
-          }
       
-      ?>
-        </ul>
-          <!-- fim do modo de preparo -->
+      <div class="cartaz col-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Modo de Preparo da Massa</h2>
+            <p class="card-text">
+              <?php
 
-        <br><br><br>
+                foreach($dadosP as $valuePM){
+                  echo  "<ul class='list'>
+                            <li>$valuePM[preparo_massa]</li>
+                          </ul>";
+                
+                }
 
-          <!-- começo da finalização -->
-        <h2>Modo de preparo da calda e finalização</h2>
-        <?php
-        
-          foreach($dadosP as $valuePC){
-            echo  "<ul class='list'>
-                      <li>$valuePC[preparo_calda]</li>
-                    </ul>";
-          }
-        
-        ?>
+              ?>
+            </p>
+          </div>
+        </div>
       </div>
+
+          
+      <div class="cartaz col-8 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Modo de Preparo da Calda</h2>
+            <p class="card-text"> 
+              <?php
+
+                foreach($dadosP as $valuePC){
+                  echo  "<ul class='list'>
+                            <li>$valuePC[preparo_calda]</li>
+                          </ul>";
+                }
+              
+              ?>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FInalização -->
+      <div class="cartaz col-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Finalização</h2>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartaz col-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"></h2>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
