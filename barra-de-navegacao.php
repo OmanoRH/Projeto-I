@@ -33,21 +33,26 @@
 
         <!-- Barra de Pesquisa -->
         <div class="barraPesquisa">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
+          
+          <form" class="d-flex" role="search">
 
+            <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
 
             <!-- Botão de Busca -->
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
-        </div>
-        
-        <!-- Botão de Cadastro de Bolos -->
-        <div id="cadastro">
-          <form class="">
+
+
+          <!-- Botão de Cadastro de Bolos -->
+          <form>
             <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
           </form>
         </div>
+        
+
+        <!-- <div id="cadastro">
+          
+        </div> -->
         
       </div>
   </nav>
