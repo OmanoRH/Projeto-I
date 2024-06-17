@@ -23,147 +23,158 @@
 
 <body>
 
-  <?php require ("barra-de-navegacao.php"); ?>
+  <?php require("barra-de-navegacao.php"); ?>
 
   <!-- Conexão com o Banco -->
   <?php
 
     require("conexao.php");
 
-    $sql = $pdo -> prepare("SELECT * FROM bolo WHERE id_bolo = 11");
+    $sql = $pdo->prepare("SELECT * FROM bolo WHERE id_bolo = 11");
     $sql->execute();
     $dadosB = $sql->fetchAll();
 
-    $sql = $pdo -> prepare("SELECT * FROM ingredientes WHERE id_ingredientes = 1");
+    $sql = $pdo->prepare("SELECT * FROM ingredientes WHERE id_ingredientes = 1");
     $sql->execute();
     $dadosI = $sql->fetchAll();
 
-    $sql = $pdo -> prepare("SELECT * FROM preparo WHERE id_preparo = 1");
+    $sql = $pdo->prepare("SELECT * FROM preparo WHERE id_preparo = 1");
     $sql->execute();
     $dadosP = $sql->fetchAll();
 
   ?>
 
-  <!-- Imagem da receita -->
-      <?php
-
-        foreach($dadosB as $row){
-          // Tenta decodificar com diferentes tipos deimagem até sucesso
-          $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
-          foreach ($imageTypes as $type) {
-            $decoded = base64_decode($row['img_bolo'], true);
-            if ($decoded !== false) {
-                $imgData = $decoded;
-                break;
-            }
+  
+   <div class="bolo">
+    <!-- Imagem da Receita -->
+    <?php
+      foreach ($dadosB as $row) {
+        // Tenta decodificar com diferentes tipos de imagem até sucesso
+        $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
+        foreach ($imageTypes as $type) {
+          $decoded = base64_decode($row['img_bolo'], true);
+          if ($decoded !== false) {
+            $imgData = $decoded;
+            break;
           }
-          echo '<img class="img-bolodecenoura" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
         }
-      ?>  
+        echo '<img class="img-bolo" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
+      }
+    ?>
+    <!-- Título da Receita -->
+    <?php
+      foreach ($dadosB as $value) {
+        echo  "<h1>$value[nome_bolo]</h1>";
+      }
+    ?>
+
+   </div>
 
 
   <div class="container">
     <div class="row">
-      
 
-      <!-- título principal -->
-      <div class="title">
-        <?php
-          foreach($dadosB as $value){
-            echo  "<h1>$value[nome_bolo]</h1>";
-          }
-        ?>
-        
-      </div>
-        
-      </div>
+    
+      <!-- Cards -->
+      <div class="cards">
+        <div class="cartaz col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Igredientes da Massa</h2>
+              <p class="card-text">
+                <?php
 
-        <!-- card da receita calda -->
-        <div class="cartaz col-8">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">Igredientes da Massa</h2>
-            <p class="card-text">
-              <?php
-        
-                foreach($dadosI as $valueMassa){
-                  echo  "<ul class='list'>
-                            <li>$valueMassa[ingredientes_massa]</li>
-                          </ul>";
-                }
-              
-              ?>
+                  foreach ($dadosI as $valueMassa) {
+                    echo  "<ul class='list'>
+                                <li>$valueMassa[ingredientes_massa]</li>
+                              </ul>";
+                  }
+
+                ?>
               </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cartaz col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Igredientes da Calda</h2>
+              <p class="card-text">
+                <?php
+                  foreach ($dadosI as $valueCalda) {
+                    echo  "<ul class='list'>
+                              <li>$valueCalda[ingredientes_calda]</li>
+                            </ul>";
+                  }
+
+                ?>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="cartaz col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Modo de Preparo da Massa</h2>
+              <p class="card-text">
+                <?php
+                  foreach ($dadosP as $valuePM) {
+                    echo  "<ul class='list'>
+                                <li>$valuePM[preparo_massa]</li>
+                              </ul>";
+                  }
+
+                ?>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="cartaz col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Modo de Preparo da Calda</h2>
+              <p class="card-text">
+                <?php
+                  foreach ($dadosP as $valuePC) {
+                    echo  "<ul class='list'>
+                                <li>$valuePC[preparo_calda]</li>
+                              </ul>";
+                  }
+
+                ?>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- FInalização -->
+        <div class="cartaz col-7">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Finalização</h2>
+              <p class="card-text"></p>
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="cartaz col-8">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">Modo de Preparo da Massa</h2>
-            <p class="card-text">
-              <?php
 
-                foreach($dadosP as $valuePM){
-                  echo  "<ul class='list'>
-                            <li>$valuePM[preparo_massa]</li>
-                          </ul>";
-                
-                }
-
-              ?>
-            </p>
-          </div>
-        </div>
-      </div>
-
-          
-      <div class="cartaz col-8 mb-3">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">Modo de Preparo da Calda</h2>
-            <p class="card-text"> 
-              <?php
-
-                foreach($dadosP as $valuePC){
-                  echo  "<ul class='list'>
-                            <li>$valuePC[preparo_calda]</li>
-                          </ul>";
-                }
-              
-              ?>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FInalização -->
-      <div class="cartaz col-8">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title">Finalização</h2>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="cartaz col-8">
-        <div class="card">
-          <div class="card-body">
-            <h2 class="card-title"></h2>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
 
-  
+
   <!-- Rodapé do Site -->
   <?php
-    require("rodape.php");
+  require("rodape.php");
   ?>
 
 
