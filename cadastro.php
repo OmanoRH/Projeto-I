@@ -57,7 +57,7 @@
 
       // Verifica o tipo de arquivo enviado
       $mime_type = mime_content_type($_FILES['imgPreview']['tmp_name']);
-      if (!in_array($mime_type, ['image/jpeg', 'image/png'])) {
+      if (!in_array($mime_type, ['image/jpeg', 'image/png', 'image/webp'])) {
           die("Apenas são permitidas imagens JPEG ou PNG.");
       }
 
@@ -123,8 +123,8 @@
          $sql = $pdo -> prepare("INSERT INTO ingredientes VALUES (null, ?, ?);");
          $sql -> execute([$igredientesMassa, $igredientesCalda]);
 
-        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?);");
-         $sql -> execute([$preparoMassa, $preparoCalda]);
+        $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?, ?);");
+         $sql -> execute([$preparoMassa, $preparoCalda, $finalizacaoBolo]);
         
          header("");
        }
@@ -181,7 +181,7 @@
 
         <!-- Cadastro Nome do Boleiro -->
         <div class="mb-3 mt-3">
-          <label for="nomeDoBoleiro">Nome do Boleiro:</label>
+          <label for="nomeDoBoleiro">Seu Nome:</label>
           <input name="nomeDoBoleiro" class="form-control " required  type="text" placeholder="Coloque aqui o nome do Boleiro" aria-label="default input example">
         </div>
 
