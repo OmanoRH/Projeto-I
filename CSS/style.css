@@ -51,11 +51,11 @@
 
 
 
- .img-bolodecenoura{
-    margin-top: 30px;
-    width: 900px;
-    border-radius: 15px;
-    margin-left: 180px;
+.img-bolodecenoura{
+
+    height: 300px;
+    border-radius: 5px !important;
+
 }
 
 .title{
