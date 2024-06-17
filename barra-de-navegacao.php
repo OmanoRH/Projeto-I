@@ -24,7 +24,7 @@
             </a>
             <ul class="dropdown-menu" style="background-color: white;">
               <li><a class="dropdown-item" href="gourmet.php">Bolos Gourmet</a></li>
-              <li><a class="dropdown-item" href="vulcão.php">Bolos Vulcão</a></li>
+              <li><a class="dropdown-item" href="vulcao.php">Bolos Vulcão</a></li>
               <li><a class="dropdown-item" href="caseiro.php">Bolos Caseiros</a></li>
             </ul>
           </li>

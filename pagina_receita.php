@@ -25,9 +25,9 @@
          
     
         <div class="container">
-            <div class="">
+            <div class="row">
 
-                <img id="fotoBolo" src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg">
+                
 
                 <h1 class="mt-3">Bolo de cenoura</h1>
 
