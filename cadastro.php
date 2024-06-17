@@ -44,6 +44,25 @@
       $imgPreview = $_FILES['imgPreview']['tmp_name'];//tmp_name é um nome temporario para o arquivo
       $imgPreviewType = $_FILES['imgPreview']['type'];
 
+      // Verifica se o campo de upload está vazio
+      if ($_FILES['imgPreview']['size'] == 0) {
+        die("Por favor, selecione uma imagem para enviar.");
+      }
+       
+
+      // Verifica se houve algum erro no upload
+      if ($_FILES['imgPreview']['error'] !== UPLOAD_ERR_OK) {
+        die("Erro no upload. Por favor, tente novamente.");
+      }
+
+      // Verifica o tipo de arquivo enviado
+      $mime_type = mime_content_type($_FILES['imgPreview']['tmp_name']);
+      if (!in_array($mime_type, ['image/jpeg', 'image/png'])) {
+          die("Apenas são permitidas imagens JPEG ou PNG.");
+      }
+
+      // Gera um nome único para a imagem
+      $nome_imagem = uniqid('imgPreview_') . '.' . pathinfo($_FILES['imgPreview']['name'], PATHINFO_EXTENSION);
 
       $imgData = file_get_contents($imgPreview);// Lê o conteudo da imagem
 
@@ -94,7 +113,7 @@
         $erroFinalBolo = "Nenhum";
       }
 
-      var_dump($imgPreview);
+      
 
        if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
         
@@ -133,16 +152,6 @@
           <label for="fileInput"><span class="mdi mdi-file-upload " id="icon"></span></label>
                                       <!-- Atributo para que o input fique escondido-->
           <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
-          <div class="invalid-feedback">
-            <?php
-              if(isset($erroimgPreview)){
-                if($erroimgPreview != "Nenhum"){
-                  echo $erroimgPreview; //Código com erro
-                }
-              }                      
-            ?>
-          </div> 
-
         </div>
 
         <!-- Seleção do Tipo de Bolo -->
