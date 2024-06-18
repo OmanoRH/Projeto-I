@@ -73,9 +73,9 @@
               </div>
           ';
         }
-      
-      
       ?>
+    </div>
+  </div>
   <!-- Fim dos Cards de Bolo de Cenoura -->
 
 

@@ -71,23 +71,24 @@
               </div>
           ';
         }
-      
-      
       ?>
-      <!--Começo dos Cards de Bolo -->
+    </div>
+  </div>
 
-  <!-- Fim dos Cards de Bolo-->
+        <!-- Rodapé do Site -->
+        <?php
+          require("rodape.php");
+        ?>
 
-
-    <!-- Rodapé do Site -->
-    <?php
-      require("rodape.php");
-    ?>
 
 
   <!-- Linkagem do JS -->
   <script src="JS/bootstrap.bundle.min.js"></script>
   <script src="JS/script.js"></script>
 </body>
+        
+<footer>
+
+</footer>
 
 </html>

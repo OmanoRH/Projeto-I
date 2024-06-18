@@ -37,7 +37,7 @@
     <!-- introdução do site -->
     <div class="container">
       <div class="row">
-        <h1 class="mt-3">Bem-vindo ao Boleiros Receitas!</h1>
+        <h1 class="mt-3">Bem-vindo ao Boleiro Receitas!</h1>
         <p>Explore uma variedade de receitas deliciosas e descubra segredos culinários para criar bolos incríveis. <br> De
           clássicos reconfortantes a sobremesas inspiradoras, mergulhe em nossa comunidade e compartilhe o amor pelos
           bolos. <br> Venha fazer parte dessa jornada de sabor e criatividade!</p>
