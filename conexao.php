@@ -2,10 +2,10 @@
 <!-- Declaração das Variaveis -->
 <?php 
 
-    $servidor = "localhost";
-    $usuario = "root";
-    $senha = "";
-    $banco = "boleiros_receitas";
+    $servidor = "69.49.241.104";
+    $usuario = "prepress_grupoboleiro";
+    $senha = "@Boleiros#2024";
+    $banco = "prepress_boleiros";
 
 ?>
 
