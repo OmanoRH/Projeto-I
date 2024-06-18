@@ -32,7 +32,7 @@
 
 
         <!-- Barra de Pesquisa -->
-        <div class="barraPesquisa">
+        <div class="barraPesquisa d-flex">
           
           <form class="d-flex" role="search" method="GET" action="resultado_pesquisa.php">
 
@@ -45,7 +45,7 @@
 
           <!-- Botão de Cadastro de Bolos -->
           <form>
-            <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
+            <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu bolo</button></a>
           </form>
         </div>
         
