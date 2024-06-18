@@ -30,17 +30,21 @@
 
     require("conexao.php");
 
-    $sql = $pdo->prepare("SELECT * FROM bolo WHERE id_bolo = 11");
-    $sql->execute();
-    $dadosB = $sql->fetchAll();
+    if (isset($_GET['id'])) {
+      $id = $_GET['id'];
 
-    $sql = $pdo->prepare("SELECT * FROM ingredientes WHERE id_ingredientes = 1");
-    $sql->execute();
-    $dadosI = $sql->fetchAll();
+      $sql = $pdo->prepare("SELECT * FROM bolo WHERE id_bolo = ?");
+      $sql->execute([$id]);
+      $dadosB = $sql->fetchAll();
 
-    $sql = $pdo->prepare("SELECT * FROM preparo WHERE id_preparo = 1");
-    $sql->execute();
-    $dadosP = $sql->fetchAll();
+      $sql = $pdo->prepare("SELECT * FROM ingredientes WHERE id_ingredientes = ?");
+      $sql->execute([$id]);
+      $dadosI = $sql->fetchAll();
+
+      $sql = $pdo->prepare("SELECT * FROM preparo WHERE id_preparo = ?");
+      $sql->execute([$id]);
+      $dadosP = $sql->fetchAll();
+    }
 
   ?>
 
