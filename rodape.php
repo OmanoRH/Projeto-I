@@ -8,7 +8,7 @@
 
 <body>
 
-  <footer >
+  <footer>
 
     <!-- Area de Contatos -->
     <div id="area-de-contato" style="width: 100%;">
@@ -21,7 +21,7 @@
           </div>
 
           <!-- Número para Contato -->
-          <div class="col-md-6 contact-box">
+          <div class="col-6">
             <span class="numero">
               <i class="mdi mdi-phone"></i>
               <p><span class="contact-title">Número para Contato:</span> (83)988974285</p>
@@ -30,10 +30,10 @@
 
 
           <!-- E-mail para Contato -->
-          <div class="col-md-6 contact-box">
+          <div class="col-6">
             <span class="numero">
-              <i class="mdi mdi-email"></i>
-              <p><span class="contact-title">E-mail para Contato:</span> boleirosmtfodas@gmail.com</p>
+              
+              <p><span class="contact-title"><i class="mdi mdi-email"> </i>E-mail para Contato:</span> boleirosmtfodas@gmail.com</p>
             </span>
           </div>
 
