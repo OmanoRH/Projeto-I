@@ -137,7 +137,7 @@
           <!-- Utilizando o label com icone como button para o upload da imagem  -->
           <label for="fileInput"><span class="mdi mdi-file-upload " id="icon"></span></label>
           <!-- Atributo para que o input fique escondido-->
-          <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview">
+          <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
         </div>
 
         <!-- Seleção do Tipo de Bolo -->
