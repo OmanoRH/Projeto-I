@@ -85,7 +85,7 @@
       if(empty($nomeDoBolo)){
         $erroNome = "Por Favor, informe o nome do bolo";
       } else {
-        if(!preg_match("/^[a-zA-Z-' ]*$/",$nomeDoBolo)) {
+        if(!preg_match("/^[a-zA-Z- ']*$/",$nomeDoBolo)) {
           $erroNome = "São apenas permitidos letras de A-Z";
         }
         else{

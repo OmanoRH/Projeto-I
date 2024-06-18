@@ -76,7 +76,11 @@
           <!-- Título da Receita -->
           <?php
           foreach ($dadosB as $value) {
-            echo  "<h1>$value[nome_bolo]</h1>";
+
+            $valueData = explode("-", $value['data_criacao']);
+            $valueDataF = $valueData[2]."/".$valueData[1]."/".$valueData[0];
+
+            echo  "<h1>Nome: $value[nome_bolo]</h1> <h2>Criador: $value[nome_criador]</h2> <h2>Data: $valueDataF</h2>";
           }
           ?>
 
@@ -173,7 +177,7 @@
             <div class="card mt-3">
               <div class="card-body">
                 <h2 class="card-title">Finalização</h2>
-                <p class="card-text"></p>
+                <p class="card-text"><ul><li><?php foreach($dadosP as $valuePF){echo"$valuePF[preparo_final]";} ?></li></ul></p>
               </div>
             </div>
           </div>

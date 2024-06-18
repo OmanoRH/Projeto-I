@@ -12,6 +12,11 @@
 <!-- Conexão -->
 <?php 
 
-    $pdo = new PDO("mysql:host=$servidor; dbname=$banco", "$usuario", "$senha"); 
+    try{
+        $pdo = new PDO("mysql:host=$servidor; dbname=$banco", "$usuario", "$senha"); 
+    } catch(PDOException $e) {
+        die($e -> getMessage());
+    }
+    
 
 ?>
