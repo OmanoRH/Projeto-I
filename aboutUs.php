@@ -39,7 +39,7 @@
 
   <footer>
     <!-- Rodapé do Site  -->
-  <div style="position: fixed; bottom: 0; width: 100%;">
+  <div>
     <?php 
       require ("rodape.php");
     ?>

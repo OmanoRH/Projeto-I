@@ -123,6 +123,8 @@ footer{
     width: 100% !important;
     background-color:  rgb(255 170 91) !important;
     display: flex !important;
+    bottom: 0 !important;
+    margin-top: 20px !important;
 }
 
 

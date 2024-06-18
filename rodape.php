@@ -8,7 +8,7 @@
 
 <body>
 
-  <footer class="mt-5">
+  <footer >
 
     <!-- Area de Contatos -->
     <div id="area-de-contato" style="width: 100%;">
