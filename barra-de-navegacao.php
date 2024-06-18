@@ -39,7 +39,7 @@
             <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
 
             <!-- Botão de Busca -->
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <?php echo'<a class="btn btn-outline-success" href="paginaReceita.php?id='.$nomeBolo.'type="submit">Buscar</a>'; ?>
           </form>
 
 
