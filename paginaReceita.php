@@ -44,124 +44,133 @@
 
   ?>
 
-  
-   <div class="bolo">
-    <!-- Imagem da Receita -->
-    <?php
-      foreach ($dadosB as $row) {
-        // Tenta decodificar com diferentes tipos de imagem até sucesso
-        $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
-        foreach ($imageTypes as $type) {
-          $decoded = base64_decode($row['img_bolo'], true);
-          if ($decoded !== false) {
-            $imgData = $decoded;
-            break;
-          }
-        }
-        echo '<img class="img-bolo" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">';
-      }
-    ?>
-    <!-- Título da Receita -->
-    <?php
-      foreach ($dadosB as $value) {
-        echo  "<h1>$value[nome_bolo]</h1>";
-      }
-    ?>
-
-   </div>
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
 
 
   <div class="container">
     <div class="row">
+      <div class="col-5">
+        <div class="bolo mt-5">
+          <!-- Imagem da Receita -->
+          <?php
+          foreach ($dadosB as $row) {
+            // Tenta decodificar com diferentes tipos de imagem até sucesso
+            $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem
+            foreach ($imageTypes as $type) {
+              $decoded = base64_decode($row['img_bolo'], true);
+              if ($decoded !== false) {
+                $imgData = $decoded;
+                break;
+              }
+            }
+            echo '<img class="img-bolo" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="Bolo de Cenoura">';
+          }
+          ?>
+          <!-- Título da Receita -->
+          <?php
+          foreach ($dadosB as $value) {
+            echo  "<h1>$value[nome_bolo]</h1>";
+          }
+          ?>
 
-    
-      <!-- Cards -->
-      <div class="cards">
-        <div class="cartaz col-7">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Igredientes da Massa</h2>
-              <p class="card-text">
-                <?php
+        </div>
+      </div>
+
+
+      <div class="col-7 mt-5">
+
+
+        <!-- Cards -->
+        <div class="cards">
+          <div class="cartaz">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title">Igredientes da Massa</h2>
+                <p class="card-text">
+                  <?php
 
                   foreach ($dadosI as $valueMassa) {
                     echo  "<ul class='list'>
-                                <li>$valueMassa[ingredientes_massa]</li>
-                              </ul>";
+                                  <li>$valueMassa[ingredientes_massa]</li>
+                                </ul>";
                   }
 
-                ?>
-              </p>
+                  ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
 
-        <div class="cartaz col-7">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Igredientes da Calda</h2>
-              <p class="card-text">
-                <?php
+          <div class="cartaz">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h2 class="card-title">Igredientes da Calda</h2>
+                <p class="card-text">
+                  <?php
                   foreach ($dadosI as $valueCalda) {
                     echo  "<ul class='list'>
-                              <li>$valueCalda[ingredientes_calda]</li>
-                            </ul>";
+                                <li>$valueCalda[ingredientes_calda]</li>
+                              </ul>";
                   }
 
-                ?>
-              </p>
+                  ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
 
 
-        <div class="cartaz col-7">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Modo de Preparo da Massa</h2>
-              <p class="card-text">
-                <?php
+          <div class="cartaz">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h2 class="card-title">Modo de Preparo da Massa</h2>
+                <p class="card-text">
+                  <?php
                   foreach ($dadosP as $valuePM) {
                     echo  "<ul class='list'>
-                                <li>$valuePM[preparo_massa]</li>
-                              </ul>";
+                                  <li>$valuePM[preparo_massa]</li>
+                                </ul>";
                   }
 
-                ?>
-              </p>
+                  ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
 
 
-        <div class="cartaz col-7">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Modo de Preparo da Calda</h2>
-              <p class="card-text">
-                <?php
+          <div class="cartaz">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h2 class="card-title">Modo de Preparo da Calda</h2>
+                <p class="card-text">
+                  <?php
                   foreach ($dadosP as $valuePC) {
                     echo  "<ul class='list'>
-                                <li>$valuePC[preparo_calda]</li>
-                              </ul>";
+                                  <li>$valuePC[preparo_calda]</li>
+                                </ul>";
                   }
 
-                ?>
-              </p>
+                  ?>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
 
 
-        <!-- FInalização -->
-        <div class="cartaz col-7">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Finalização</h2>
-              <p class="card-text"></p>
+          <!-- FInalização -->
+          <div class="cartaz">
+            <div class="card mt-3">
+              <div class="card-body">
+                <h2 class="card-title">Finalização</h2>
+                <p class="card-text"></p>
+              </div>
             </div>
           </div>
         </div>

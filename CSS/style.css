@@ -32,18 +32,10 @@
     display: flex;
 }
 
-#envelope{
-    /* margin-right: 12px; */
-
-}
-
 .numero{
     display: flex;
 }
 
-#whatsapp{
-    /* margin-right: 12px; */
-}
 
 #cadastro{
     margin-left: 20px;
@@ -63,20 +55,14 @@
     width: 500px;
 }
 
-.bolo{
+ .bolo{
     margin-left: 30px;
     margin-top: 30px;
 }
 
 .cards{
-    margin-left: 300px;
-}
-
-.title{
-  
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
+    
+} 
 
 .igredientes{
   margin-top: 100px;  
@@ -113,7 +99,8 @@ h2{
 
 
 .card{
-    border-color: rgb(255 170 91);
+    border-color: rgb(255 170 91) !important;
+    border-radius: 3px !important;
 }
 
 p{
@@ -130,6 +117,8 @@ h1{
     right: 30px;
     
 }
+
+
 
 
 @media screen and (max-width: 992px){
