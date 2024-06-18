@@ -32,22 +32,18 @@
     Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
 
   </div>
-    
-    <!-- Rodapé do Site  -->
-  <div style="position: fixed; bottom: 0; width: 100%;">
-
-    <?php 
-      require ("rodape.php");
-    ?>
-
-  </div>
-    
-    
-    
-
     <!-- Linkagem do JS -->
     <script src="JS/bootstrap.bundle.min.js"></script>
     <script src="JS/script.js"></script>
 </body> 
+
+  <footer>
+    <!-- Rodapé do Site  -->
+  <div style="position: fixed; bottom: 0; width: 100%;">
+    <?php 
+      require ("rodape.php");
+    ?>
+  </div>
+  </footer>
 
 </html>
