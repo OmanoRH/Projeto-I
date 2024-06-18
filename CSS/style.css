@@ -84,12 +84,12 @@ h2{
 }
 
 
-#linkCadastro{
+#link{
     text-decoration: none;
     color:black;
 }
 
-#linkCadastro:hover{
+#link:hover{
     color: white;
 }
 
