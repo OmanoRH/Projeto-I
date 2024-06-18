@@ -32,20 +32,20 @@
 
 
         <!-- Barra de Pesquisa -->
-        <div class="barraPesquisa">
+        <div class="barraPesquisa d-flex">
           
-          <form" class="d-flex" role="search">
+          <form class="d-flex" role="search" method="GET" action="resultado_pesquisa.php">
 
-            <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
+            <input class="form-control" type="search" name="pesquisa" placeholder="Pesquisar" aria-label="Search" style="background-color: white;">
 
             <!-- Botão de Busca -->
-            <?php echo'<a class="btn btn-outline-success" href="paginaReceita.php?id='.$nomeBolo.'type="submit">Buscar</a>'; ?>
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
 
 
           <!-- Botão de Cadastro de Bolos -->
           <form>
-            <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu Bolo</button></a>
+            <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu bolo</button></a>
           </form>
         </div>
         
