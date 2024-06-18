@@ -23,6 +23,13 @@
   <?php
 
     require("barra-de-navegacao.php");
+
+    require("conexao.php");
+
+
+    $sql = $pdo -> prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo");
+    $sql->execute();
+    $dadosB = $sql->fetchAll();
     
   ?>
 
@@ -51,6 +58,8 @@
       </div>
       <div class="carousel-inner">
 
+      <a href="paginaReceita.php">
+
         <div class="carousel-item active mt-3">
           <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
             alt="...">
@@ -60,6 +69,8 @@
               o coração de todos!.</p>
           </div>
         </div>
+
+        </a>
 
         <a href="paginaReceita.php">
 
@@ -103,49 +114,38 @@
   <!-- cards -->
   <div class="container"> 
     <div class="row">
-      <h2 class="mt-3">Confira nossas receitas mais acessadas:</h2>
+      <h2 class="mt-3">Confira nossas outras receitas:</h2>
 
+      <?php
+      
+      foreach($dadosB as $value){
 
-      <div class="cartaz col-4">
-        <div class="card mt-3">
-          <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
-          <div class="card-body">
-            <h5 class="card-title">Bolo de Cenoura</h5>
-            <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
-              e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
-              receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
-          </div>
-        </div>
-      </div>
+        $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
 
+        foreach ($imageTypes as $type) {
+        $decoded = base64_decode($value['img_bolo'], true);
+        if ($decoded !== false) {
+            $imgData = $decoded;
+            break;
+          }
+        }
 
-      <div class="cartaz col-4">
-        <div class="card mt-3">
-          <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
-          <div class="card-body">
-            <h5 class="card-title">Bolo de Cenoura</h5>
-            <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
-              e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
-              receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="cartaz col-4">
-        <div class="card mt-3">
-          <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="card-img-top" alt="Bolo de Cenoura">
-          <div class="card-body">
-            <h5 class="card-title">Bolo de Cenoura</h5>
-            <p class="card-text">O bolo de cenoura é um doce muito popular em nosso país, especialmente no café da manhã
-              e no lanche da tarde. Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma
-              receita que conquista o coração de todos!</p>
-            <a href="paginaReceita.php" class="btn btn-primary">Ver Receita Completa</a>
-          </div>
-        </div>
-      </div>
+        echo'
+            <div class="cartaz col-4">
+              <div class="card mt-3">
+                <img class="img-bolodecenoura" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">
+                <div class="card-body">
+                  <h5 class="card-title">'.$value['nome_bolo'].'</h5>
+                  <a href="paginaReceita.php?id='.$value['id_bolo'].'" class="btn btn-primary"> Ver Receita Completa </a>
+                </div>
+              </div>
+            </div>
+        ';
+      }
+    
+    
+    ?>
+      
     </div>
   </div>
   <!-- fim dos cards -->
