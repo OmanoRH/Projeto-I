@@ -69,7 +69,7 @@
       }
       
       if(empty($imgPreview)){
-        $erroimgPreview = "<script>alert('I am an alert box!');</script>";
+        $erroimgPreview = "Escolha uma imagem";
       } else {
         $erroimgPreview = "Nenhum";
       }
