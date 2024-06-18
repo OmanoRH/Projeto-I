@@ -100,7 +100,7 @@ h2{
 
 .card{
     border-color: rgb(255 170 91) !important;
-    border-radius: 3px !important;
+    border-width: 3px !important;
 }
 
 p{
