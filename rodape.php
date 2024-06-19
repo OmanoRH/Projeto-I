@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <footer>
+    <footer class="footer mt-5 py-3">
 
       <!-- Area de Contatos -->
       <div id="area-de-contato" style="width: 100%;">

@@ -114,7 +114,11 @@ h1{
     right: 30px;
     
 }
-
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que o footer fique sempre no final da página */
+  }
 
 footer{
     width: 100% !important;
