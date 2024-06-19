@@ -22,14 +22,11 @@
             require("barra-de-navegacao.php");
 
             require("conexao.php");
-
-            if (isset($_GET['pesquisa'])) {
-                $nomeBolo = $_GET['pesquisa']; 
                 
-                $sql = $pdo -> prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo LIMIT 6 to 12");
-                $sql->execute(['%' .$nomeBolo. '%']);
-                $dadosB = $sql->fetchAll();
-            }
+            $sql = $pdo -> prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo LIMIT 6 OFFSET 6");
+            $sql->execute();
+            $dadosB = $sql->fetchAll();
+
         ?>
 
         <div class="container">
@@ -65,7 +62,7 @@
                     echo '<p>Nenhum resultado encontrado.</p>';
                 }
         ?>
-        <a href="paginaReceita.php?id=' . $value['id_bolo'] . '" class="btn mt-5 mb-3 btn-primary">Ver os Proximos Bolos</a>
+            <a href="proximos_bolos.php" class="btn mt-5 mb-3 btn-primary">Ver Todos os Bolos</a>
             </div>
         </div>
 
