@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-  <!-- TItulo -->
-  <title>Boleiros Receitas</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <!-- Linkagem do CSS -->
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-</head>
+    <!-- TItulo -->
+    <title>Boleiros Receitas</title>
 
-<body>
 
-<!-- Barra de Navegação -->
-  <?php
-    require("barra-de-navegacao.php");
-  ?>
-  <div>
+    <!-- Linkagem do CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+  </head>
 
-    <h1 class="mt-5"> Sobre Nós </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsa exercitationem aperiam voluptas laborum praesentium error in nulla, non cumque corrupti vel hic sunt. Tenetur facere modi blanditiis sint cupiditate?
-    Provident sequi atque laborum, eaque iure fugiat debitis? Enim incidunt velit nisi id officiis aliquid cupiditate sint eveniet in unde, laboriosam obcaecati maxime inventore modi veniam harum, quod veritatis nemo!
-    Aperiam voluptatem voluptatum similique nihil quos tempore provident excepturi dolorem explicabo magnam eaque, optio iure? Error numquam necessitatibus, blanditiis, ea harum consequuntur consequatur culpa sapiente cum, repellat quo iure officiis!
-    Et fugit ex eaque, illum porro dignissimos saepe exercitationem fugiat possimus illo dolorem esse similique nesciunt magni ab deleniti praesentium, mollitia repudiandae consequatur beatae, neque temporibus? Iure alias minima distinctio.
-    Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
+  <body>
 
-  </div>
-    <!-- Linkagem do JS -->
-    <script src="JS/bootstrap.bundle.min.js"></script>
-    <script src="JS/script.js"></script>
-</body> 
+  <!-- Barra de Navegação -->
+    <?php
+      require("barra-de-navegacao.php");
+    ?>
+    <div>
+
+      <h1 class="mt-5"> Sobre Nós </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsa exercitationem aperiam voluptas laborum praesentium error in nulla, non cumque corrupti vel hic sunt. Tenetur facere modi blanditiis sint cupiditate?
+      Provident sequi atque laborum, eaque iure fugiat debitis? Enim incidunt velit nisi id officiis aliquid cupiditate sint eveniet in unde, laboriosam obcaecati maxime inventore modi veniam harum, quod veritatis nemo!
+      Aperiam voluptatem voluptatum similique nihil quos tempore provident excepturi dolorem explicabo magnam eaque, optio iure? Error numquam necessitatibus, blanditiis, ea harum consequuntur consequatur culpa sapiente cum, repellat quo iure officiis!
+      Et fugit ex eaque, illum porro dignissimos saepe exercitationem fugiat possimus illo dolorem esse similique nesciunt magni ab deleniti praesentium, mollitia repudiandae consequatur beatae, neque temporibus? Iure alias minima distinctio.
+      Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
+
+    </div>
+      <!-- Linkagem do JS -->
+      <script src="JS/bootstrap.bundle.min.js"></script>
+      <script src="JS/script.js"></script>
+  </body> 
 
   <footer>
     <!-- Rodapé do Site  -->
-  <div>
-    <?php 
-      require ("rodape.php");
-    ?>
-  </div>
+    <div>
+      <?php 
+        require ("rodape.php");
+      ?>
+    </div>
   </footer>
-
 </html>

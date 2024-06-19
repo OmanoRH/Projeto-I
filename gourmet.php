@@ -80,7 +80,6 @@
     ?>
 
 
-
     <!-- Linkagem do JS -->
     <script src="JS/bootstrap.bundle.min.js"></script>
     <script src="JS/script.js"></script>
