@@ -17,20 +17,22 @@
 
   <body>
 
-  <!-- Barra de Navegação -->
+    <!-- Barra de Navegação -->
     <?php
       require("barra-de-navegacao.php");
     ?>
-    <div>
 
-      <h1 class="mt-5"> Sobre Nós </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsa exercitationem aperiam voluptas laborum praesentium error in nulla, non cumque corrupti vel hic sunt. Tenetur facere modi blanditiis sint cupiditate?
-      Provident sequi atque laborum, eaque iure fugiat debitis? Enim incidunt velit nisi id officiis aliquid cupiditate sint eveniet in unde, laboriosam obcaecati maxime inventore modi veniam harum, quod veritatis nemo!
-      Aperiam voluptatem voluptatum similique nihil quos tempore provident excepturi dolorem explicabo magnam eaque, optio iure? Error numquam necessitatibus, blanditiis, ea harum consequuntur consequatur culpa sapiente cum, repellat quo iure officiis!
-      Et fugit ex eaque, illum porro dignissimos saepe exercitationem fugiat possimus illo dolorem esse similique nesciunt magni ab deleniti praesentium, mollitia repudiandae consequatur beatae, neque temporibus? Iure alias minima distinctio.
-      Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
-
+    <div class="container">
+      <div class="row">
+          <h1 class="mt-3"> Sobre Nós </h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsa exercitationem aperiam voluptas laborum praesentium error in nulla, non cumque corrupti vel hic sunt. Tenetur facere modi blanditiis sint cupiditate?
+          Provident sequi atque laborum, eaque iure fugiat debitis? Enim incidunt velit nisi id officiis aliquid cupiditate sint eveniet in unde, laboriosam obcaecati maxime inventore modi veniam harum, quod veritatis nemo!
+          Aperiam voluptatem voluptatum similique nihil quos tempore provident excepturi dolorem explicabo magnam eaque, optio iure? Error numquam necessitatibus, blanditiis, ea harum consequuntur consequatur culpa sapiente cum, repellat quo iure officiis!
+          Et fugit ex eaque, illum porro dignissimos saepe exercitationem fugiat possimus illo dolorem esse similique nesciunt magni ab deleniti praesentium, mollitia repudiandae consequatur beatae, neque temporibus? Iure alias minima distinctio.
+          Alias soluta placeat laborum voluptates nisi ullam blanditiis ea rerum aperiam mollitia officiis, accusamus iusto, optio eligendi doloremque velit ducimus, similique nam autem consequuntur maiores laudantium iure veniam? Repellat, voluptatibus!</p>
+      </div>
     </div>
+      
       <!-- Linkagem do JS -->
       <script src="JS/bootstrap.bundle.min.js"></script>
       <script src="JS/script.js"></script>
@@ -38,10 +40,12 @@
 
   <footer>
     <!-- Rodapé do Site  -->
-    <div>
-      <?php 
-        require ("rodape.php");
-      ?>
+    <div class="container">
+      <div class="row">
+        <?php 
+          require ("rodape.php");
+        ?>
+      </div>
     </div>
   </footer>
 </html>

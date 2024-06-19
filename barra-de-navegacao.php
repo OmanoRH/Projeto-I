@@ -44,7 +44,7 @@
 
 
         <!-- Botão de Cadastro de Bolos -->
-        <form>
+        <form id="butao_cadastro">
           <a href="cadastro.php"><button class="btn btn-outline-success" type="button">Cadastre seu bolo</button></a>
         </form>
       </div> 
