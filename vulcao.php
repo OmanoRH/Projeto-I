@@ -77,11 +77,17 @@
     </div>
     <!-- Fim dos Cards de Bolo de Cenoura -->
 
-
-    <!-- Rodapé do Site -->
-    <?php
-      require("rodape.php");
-    ?>
+    
+    <footer class="footer mt-auto py-3">
+    <!-- Rodapé do Site  -->
+    <div class="container">
+      <div class="row">
+        <?php 
+          require ("rodape.php");
+        ?>
+      </div>
+    </div>
+  </footer>
 
 
     <!-- Linkagem do JS -->

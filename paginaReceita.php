@@ -45,7 +45,7 @@
 
     ?>
 
-
+    
     <div class="container">
       <div class="row">
         <div class="col-5">
@@ -172,7 +172,7 @@
       </div>
     </div>
 
-
+    
     <!-- Rodapé do Site -->
     <?php
       require("rodape.php");

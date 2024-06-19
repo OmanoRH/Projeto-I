@@ -76,7 +76,7 @@
         <script src="JS/script.js"></script>
     </body>
     
-    <footer>
+    <footer class="footer mt-auto py-3">
         <?php
             require("rodape.php");
         ?>

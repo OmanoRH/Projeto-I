@@ -46,7 +46,6 @@
 }
 
 
-
 .img-bolodecenoura{
 
     height: 300px;
@@ -58,9 +57,11 @@
     width: 500px;
 }
 
- .bolo{
-    margin-left: 30px;
-    margin-top: 30px;
+#fechar{
+    text-align: left !important;
+    margin-bottom: 20px !important;
+    margin-right: 20px !important;
+    width: 200px !important;
 }
 
 .igredientes{
@@ -145,6 +146,22 @@ footer{
         padding-right: 0px !important;
     }
 
+    .footer{
+        width: 100% !important;
+    }
+
+    .navbar{
+        width: 100% !important;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 1399px){
+    .bolo{
+        display: block;
+    }
 }
 
  

@@ -94,7 +94,7 @@
             </div>
           </a>
 
-          <div class="carousel-item">
+          <div class="carousel-item mt-3">
             <img id="bolo" src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="carrosel d-block w-100" 
               alt="...">
             <div class="carousel-caption d-none d-md-block">
