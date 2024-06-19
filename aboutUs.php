@@ -53,7 +53,7 @@
 
           <div class="col-lg-4 mb-4">
             <div class="card">
-              <img src="Imagens/nao_grita.png" class="card-img-top" alt="Harumi Mori">
+              <img src="https://github.com/HarumiMori.png" class="card-img-top" alt="Harumi Mori">
               <div class="card-body">
                 <h5 class="card-title">Harumi Mori</h5>
                 <p class="card-text">Otima Pessimista solucionadora de Problemas</p>

@@ -109,6 +109,7 @@
                 </div>';
             }
             ?>
+            <a href="paginaReceita.php?id=' . $value['id_bolo'] . '" class="btn mt-5 mb-3 btn-primary">Ver Todos os Bolos</a>
         </div>
     </div>
     <!-- fim dos cards -->
