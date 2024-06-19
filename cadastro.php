@@ -40,18 +40,15 @@
 
         // Verifica se o campo de upload está vazio
         if ($_FILES['imgPreview']['size'] == 0) {
-          die("Por favor, selecione uma imagem para enviar.");
-        }
-
-        // Verifica se houve algum erro no upload
-        if ($_FILES['imgPreview']['error'] !== UPLOAD_ERR_OK) {
-          die("Erro no upload. Por favor, tente novamente.");
+          echo"<script>alert('Selecione uma imagem');</script>";
+          die;
         }
 
         // Verifica o tipo de arquivo enviado
         $mime_type = mime_content_type($_FILES['imgPreview']['tmp_name']);
         if (!in_array($mime_type, ['image/jpeg', 'image/png', 'image/webp'])) {
-            die("Apenas são permitidas imagens JPEG ou PNG.");
+          echo"<script>alert('São permitidas apenas imagens JPEG, PNG e WEBP');</script>";
+          die;
         }
 
         // Gera um nome único para a imagem
@@ -67,11 +64,11 @@
           $erroTipoBolo = "Nenhum";
         }
         
-        if(empty($imgPreview)){
-          $erroimgPreview = "Escolha uma imagem";
-        } else {
-          $erroimgPreview = "Nenhum";
-        }
+        // if(empty($imgPreview)){
+        //   $erroimgPreview = "<script>window.alert('sometext');</script>";
+        // } else {
+        //   $erroimgPreview = "Nenhum";
+        // }
 
         //verificação nome do bolo
         if(empty($nomeDoBolo)){
