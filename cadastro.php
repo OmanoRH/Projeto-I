@@ -42,6 +42,8 @@
         if ($_FILES['imgPreview']['size'] == 0) {
           echo"<script>alert('Selecione uma imagem');</script>";
           die;
+        } else {
+          $erroimgPreview = "Nenhum";
         }
 
         // Verifica o tipo de arquivo enviado
@@ -102,7 +104,7 @@
           $erroFinalBolo = "Nenhum";
         }
 
-        if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" &&  $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
+        if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" && $erroimgPreview == "Nenhum" &&$erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroimgPreview == "Nenhum" && $erroFinalBolo == "Nenhum"){
           
           $sql = $pdo -> prepare("INSERT INTO bolo VALUES (null, ?, ?, ?, ?, ?, null, null);");
           $sql -> execute([$imgBase64, $nomeDoBolo, $nomeDoBoleiro, $date, $tipoBolo]);

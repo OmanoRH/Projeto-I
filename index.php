@@ -16,16 +16,20 @@
     require("barra-de-navegacao.php");
     require("conexao.php");
 
-    $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo");
-    $sql->execute();
-    $dadosB = $sql->fetchAll();
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo ORDER BY data_criacao DESC LIMIT 3");
+        $sql->execute();
+        $dadosBC = $sql->fetchAll();
+
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo LIMIT 6");
+        $sql->execute();
+        $dadosB = $sql->fetchAll();
     ?>
 
     <!-- introdução do site -->
     <div class="container">
         <div class="row">
             <h1 class="mt-3">Bem-vindo ao Boleiro Receitas!</h1>
-            <p>Explore uma variedade de receitas deliciosas e descubra segredos culinários para criar bolos incríveis. <br> De clássicos reconfortantes a sobremesas inspiradoras, mergulhe em nossa comunidade e compartilhe o amor pelos bolos. <br> Venha fazer parte dessa jornada de sabor e criatividade!</p>
+            <h2>Nossas Receitas Mais Recentes 👇</h2>
         </div>
     </div>
 
@@ -34,7 +38,7 @@
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <?php
-                foreach ($dadosB as $index => $value) {
+                foreach ($dadosBC as $index => $value) {
                     $active = $index === 0 ? 'class="active" aria-current="true"' : '';
                     echo '<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="' . $index . '" ' . $active . ' aria-label="Slide ' . ($index + 1) . '"></button>';
                 }
@@ -42,7 +46,7 @@
             </div>
             <div class="carousel-inner">
                 <?php
-                foreach ($dadosB as $index => $value) {
+                foreach ($dadosBC as $index => $value) {
                     $active = $index === 0 ? 'active' : '';
 
                     $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
