@@ -31,6 +31,16 @@
       $dadosB = $sql->fetchAll();
 
     ?>
+    
+    <!-- consulta no banco de dados para a busca de imagens para o carrossel que não funciona E EU N SEI O PQ -->
+    <?php
+     // $query_slides = "SELECT id_bolo, img_bolo FROM bolo";
+      //$result_slides = $conn -> prepare($query_slides);
+      //$result_slides -> execute();
+       
+      //$quantidade_slides = $result_slides->rowCount();
+      
+    ?>
 
 
     <!-- introdução do site -->
