@@ -53,7 +53,7 @@
                                     <img class="img-bolodecenoura" src="data:image/jpeg;base64,' . base64_encode($imgData) . '" alt="bolo de cenoura">
                                     <div class="card-body">
                                         <h5 class="card-title">' . $value['nome_bolo'] . '</h5>
-                                        <a href="paginaReceita.php?id=' . $value['id_bolo'] . '" class="btn btn-primary"> Ver Receita Completa </a>
+                                        <a href="paginaReceita.php?id=' . $value['id_bolo'] . '" class="btn btn-primary"> Ver os proximos Bolos</a>
                                     </div>
                                 </div>
                             </div>';
