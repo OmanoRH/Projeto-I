@@ -70,7 +70,7 @@
         <a href="paginaReceita.php">
 
           <div class="carousel-item active mt-3">
-            <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
+            <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="carrosel d-block w-100"
               alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>Bolo de Cenoura</h5>
@@ -84,7 +84,7 @@
           <a href="paginaReceita.php">
 
             <div class="carousel-item mt-3">
-              <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;" class="d-block w-100"
+              <img src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="carrosel d-block w-100"
                 alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Bolo de Cenoura</h5>
@@ -95,8 +95,8 @@
           </a>
 
           <div class="carousel-item">
-            <img id="bolo" src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" style="height: 700px;"
-              class="d-block w-100" alt="...">
+            <img id="bolo" src="Imagens/bolo-de-cenoura-de-liquidificador-1.jpeg" class="carrosel d-block w-100" 
+              alt="...">
             <div class="carousel-caption d-none d-md-block">
               <h5>Bolo de Cenoura</h5>
               <p>Com sua cobertura de chocolate irresistível e seu interior macio e úmido, ela é uma receita que conquista
