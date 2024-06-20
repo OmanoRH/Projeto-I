@@ -39,8 +39,8 @@
         $imgPreviewType = $_FILES['imgPreview']['type'];
 
         // Verifica se o campo de upload está vazio
-        if ($_FILES['imgPreview']['size'] == 0) {
-          echo"<script>alert('Selecione uma imagem');</script>";
+        if($_FILES['imgPreview']['size'] == 0) {
+          echo "<script>alert('Selecione uma imagem'); window.location.href = 'cadastro.php';</script>";
           die;
         } else {
           $erroimgPreview = "Nenhum";
@@ -48,8 +48,8 @@
 
         // Verifica o tipo de arquivo enviado
         $mime_type = mime_content_type($_FILES['imgPreview']['tmp_name']);
-        if (!in_array($mime_type, ['image/jpeg', 'image/png', 'image/webp'])) {
-          echo"<script>alert('São permitidas apenas imagens JPEG, PNG e WEBP');</script>";
+        if (!in_array($mime_type, ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'])) {
+          echo"<script>alert('São permitidas apenas imagens JPEG, PNG e WEBP'); window.location.href = 'cadastro.php';</script>";
           die;
         }
 
