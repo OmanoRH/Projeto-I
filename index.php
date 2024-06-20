@@ -16,7 +16,7 @@
     require("barra-de-navegacao.php");
     require("conexao.php");
 
-        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo ORDER BY data_criacao DESC LIMIT 3");
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo ORDER BY RAND() LIMIT 3");
         $sql->execute();
         $dadosBC = $sql->fetchAll();
 
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row">
             <h1 class="mt-3">Bem-vindo ao Boleiro Receitas!</h1>
-            <h2>Nossas Receitas Mais Recentes 👇</h2>
+            <h2>Sua proxima receita👇</h2>
         </div>
     </div>
 
