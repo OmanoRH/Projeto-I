@@ -48,7 +48,7 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="">
           <div class="bolo mt-5">
             <!-- Imagem da Receita -->
             <?php
@@ -79,7 +79,7 @@
         </div>
 
 
-        <div class="col-7 mt-5">
+        <div class=" mt-5">
 
 
           <!-- Cards -->
@@ -87,7 +87,7 @@
             <div class="cartaz">
               <div class="card">
                 <div class="card-body">
-                  <h2 class="card-title">Igredientes da Massa</h2>
+                  <h2 class="card-title">Ingredientes da Massa</h2>
                   <p class="card-text">
                     <?php
                       foreach ($dadosI as $valueMassa) {
@@ -111,7 +111,7 @@
                   echo '<div class="cartaz">
                           <div class="card mt-3">
                             <div class="card-body">
-                              <h2 class="card-title">Igredientes da Calda</h2>
+                              <h2 class="card-title">Ingredientes da Calda</h2>
                               <p class="card-text"><ul class="list"><li>'.$valueCalda['ingredientes_calda'].'</li></ul></p>
                             </div>
                           </div>

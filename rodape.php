@@ -31,7 +31,7 @@
             <div class="col-6">
               <span class="numero">
                 
-                <p><span class="contact-title"><i class="mdi mdi-email"> </i>E-mail para Contato:</span> boleirosmtfodas@gmail.com</p>
+                <p><span class="contact-title"><i class="mdi mdi-email"> </i>E-mail para Contato:</span> boleiroreceitas@gmail.com</p>
               </span>
             </div>
 

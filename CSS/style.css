@@ -55,6 +55,11 @@
 
 .img-bolo{
     width: 500px;
+    text-align: center !important;
+}
+
+.bolo{
+    text-align: center;
 }
 
 #fechar{
@@ -156,12 +161,6 @@ footer{
 
     
 
-}
-
-@media screen and (max-width: 1399px){
-    .bolo{
-        display: block;
-    }
 }
 
  
