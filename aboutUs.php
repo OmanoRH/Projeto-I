@@ -44,7 +44,7 @@
             <div class="card">
               <img src="https://github.com/OmanoRH.png" class="card-img-top" alt="OmanoRH">
               <div class="card-body">
-                <h5 class="card-title">OmanoRH</h5>
+                <h5 class="card-title">Renato Hilquias</h5>
                 <p class="card-text">Persistente Idiota</p>
                 <a href="https://github.com/OmanoRH" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
               </div>
@@ -63,8 +63,8 @@
           </div>
           <h3>
             Nós trabalhamos nesse site em que você está navegando agora <br>
-            TO COM SONO PORRA <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam molestiae qui distinctio modi doloribus, quisquam illo excepturi provident officiis atque laudantium quod animi quam earum dolorem dolores et laborum natus.
+            Utilizamos em nosso desenvolvimento as linguagens: HTML5, CSS3, JavaScript, PHP, MySQL e AJAX<br>
+            Nossa equipe foi formada no desenvolvimento de um projeto integrador no curso Programador Web do Senac 2024<br>
           </h3>
           </div>
         </div>
