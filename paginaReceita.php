@@ -48,7 +48,7 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="">
           <div class="bolo mt-5">
             <!-- Imagem da Receita -->
             <?php
@@ -79,7 +79,7 @@
         </div>
 
 
-        <div class="col-7 mt-5">
+        <div class=" mt-5">
 
 
           <!-- Cards -->

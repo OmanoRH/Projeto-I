@@ -54,8 +54,11 @@
             ?>
         </div>
         <div class="d-flex justify-content-between">
+            
             <!-- Voltar Button -->
             <a href="?offset=<?php echo max(0, $offset - 6); ?>" class="btn mt-5 mb-3 btn-primary <?php echo $offset <= 0 ? 'disabled' : ''; ?>">Voltar</a>
+
+
             <!-- Proxima Pagina Button -->
             <a href="?offset=<?php echo $offset + 6; ?>" class="btn mt-5 mb-3 btn-primary">Proxima pagina</a>
         </div>
