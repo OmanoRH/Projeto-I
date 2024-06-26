@@ -105,7 +105,7 @@
           $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?, ?);");
           $sql -> execute([$preparoMassa, $preparoCalda, $finalizacaoBolo]);
           
-          header("");
+          header("Location:index.php");
         }
 
       }
@@ -227,26 +227,10 @@
           <!-- Botão de Enviar -->
           <div class="mb-3 mt-5">
             <input required type="submit" value="Enviar" id="submitBtn"> 
-            <?php 
-              //if($erroTipoBolo == "Nenhum" && $erroNome == "Nenhum" && $erroimgPreview == "Nenhum" && $erroIgredientesMassa == "Nenhum" && $erroPreparoMassa == "Nenhum" && $erroFinalBolo == "Nenhum") {
-                // Redirecionamento para a página inicial 
-                //header("Location: index.php");
-                //exit(); // está com erro
-              //}
-            ?>
           </div>
 
         </form>
         <!-- Fim do Formulario Front-End de Cadastro de Bolos -->
-
-        <!--  
-        <script>
-          // JavaScript para redirecionar após o envio do formulário
-          document.getElementById('meuFormulario').onsubmit = function() {
-            window.location.href = 'index.html'; // Redireciona para a página inicial
-            return false; // Evita o envio normal do formulário
-          }
-        </script> -->
 
       </div>
     </div>
