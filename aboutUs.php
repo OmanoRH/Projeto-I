@@ -34,7 +34,7 @@
             <img src="https://github.com/StuartMorais.png" class="card-img-top" alt="Stuart Morais">
             <div class="card-body">
               <h5 class="card-title">Stuart Morais</h5>
-              <p class="card-text">Arrogantemente Inteligente</p>
+              <p class="for card-text">Banco de Dados/Back-End</p>
               <a href="https://github.com/StuartMorais" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
             </div>
           </div>
@@ -45,7 +45,7 @@
               <img src="https://github.com/OmanoRH.png" class="card-img-top" alt="OmanoRH">
               <div class="card-body">
                 <h5 class="card-title">Renato Hilquias</h5>
-                <p class="card-text">Persistente Idiota</p>
+                <p class="for card-text">Front-End</p>
                 <a href="https://github.com/OmanoRH" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
               </div>
             </div>
@@ -55,8 +55,8 @@
             <div class="card">
               <img src="https://github.com/HarumiMori.png" class="card-img-top" alt="Harumi Mori">
               <div class="card-body">
-                <h5 class="card-title">Harumi Mori</h5>
-                <p class="card-text">Otima Pessimista solucionadora de Problemas</p>
+                <h5 class="for card-title">Harumi Mori</h5>
+                <p class="card-text">Back-End</p>
                 <a href="https://github.com/HarumiMori" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
               </div>
             </div>
