@@ -16,11 +16,11 @@
     require("barra-de-navegacao.php");
     require("conexao.php");
 
-        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo ORDER BY RAND() LIMIT 3");
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo ORDER BY RAND() LIMIT 3");
         $sql->execute();
         $dadosBC = $sql->fetchAll();
 
-        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo, data_criacao FROM bolo LIMIT 6");
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo LIMIT 6");
         $sql->execute();
         $dadosB = $sql->fetchAll();
     ?>
