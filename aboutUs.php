@@ -48,7 +48,7 @@
                 <h5 class="card-title">Renato Hilquias</h5>
                 <p class="for card-text">Front-End</p>
                 <a href="https://github.com/OmanoRH"><i class="mdi mdi-github btn btn-primary"></i></a>
-                <a href="https://br.linkedin.com/in/stuartmorais"><i class="mdi mdi-linkedin btn btn-primary"></i></a>
+                <a href="https://www.linkedin.com/in/renato-soares-41a674251"><i class="mdi mdi-linkedin btn btn-primary"></i></a>
               </div>
             </div>
           </div>
