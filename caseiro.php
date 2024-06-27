@@ -43,7 +43,7 @@
 
 
         <!-- Texto de introdução -->
-        <p class="parag mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Aspernatur iusto officiis, consectetur amet dicta quasi voluptates Voluptatem provident perferendis quia.</p>
+        <p class="parag mb-3">Bolos caseiros são aqueles clássicos bolos de vó, com ingredientes simples mas o principal é sempre o amor no preparo <br> recomendado para aquele café da tarde</p>
 
         <!--Começo dos Cards de Bolo de Cenoura -->
         <?php
