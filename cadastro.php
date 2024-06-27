@@ -184,7 +184,7 @@
         
           <!-- Cadastro Texto Ingredientes da Calda -->
           <div class="mb-3 mt-5">
-            <label for="igredientesCalda" class="form-label">Faça uma lista dos Igredientes necessários para a Calda:</label>
+            <label for="igredientesCalda" class="form-label">Faça uma lista dos Igredientes necessários para a Calda/Recheio:</label>
             <textarea name="igredientesCalda" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
 
@@ -205,7 +205,7 @@
 
           <!-- Cadastro Texto Preparo da Calda -->
           <div class="mb-3 mt-5">
-            <label for="preparoCalda" class="form-label">Descreva o Modo de Preparo da Calda:</label>
+            <label for="preparoCalda" class="form-label">Descreva o Modo de Preparo da Calda/Recheio:</label>
             <textarea name="preparoCalda" required class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
 

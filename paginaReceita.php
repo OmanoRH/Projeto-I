@@ -118,7 +118,7 @@
                   echo '<div class="cartaz">
                           <div class="card mt-3">
                             <div class="card-body">
-                              <h2 class="card-title">Ingredientes da Calda</h2>
+                              <h2 class="card-title">Ingredientes da Calda/Recheio</h2>
                               <p class="card-text"><ul class="list"><li>'.$valueCalda['ingredientes_calda'].'</li></ul></p>
                             </div>
                           </div>
@@ -157,7 +157,7 @@
                   echo '<div class="cartaz">
                           <div class="card mt-3">
                             <div class="card-body">
-                              <h2 class="card-title">Modo de Preparo da Calda</h2>
+                              <h2 class="card-title">Modo de Preparo da Calda/Recheio</h2>
                               <p class="card-text"><ul class="list"><li>'.$valuePC['preparo_calda'].'</li></ul></p>
                             </div>
                           </div>
