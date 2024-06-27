@@ -32,10 +32,11 @@
           <div class="col-lg-4 mb-4">
           <div class="card">
             <img src="https://github.com/StuartMorais.png" class="card-img-top" alt="Stuart Morais">
-            <div class="card-body">
+            <div class="card-body" style="text-align: center;">
               <h5 class="card-title">Stuart Morais</h5>
               <p class="for card-text">Banco de Dados/Back-End</p>
-              <a href="https://github.com/StuartMorais" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
+              <a href="https://github.com/StuartMorais"><i class="mdi mdi-github btn btn-primary"></i></a>
+              <a href="https://br.linkedin.com/in/stuartmorais"><i class="mdi mdi-linkedin btn btn-primary"></i></a>
             </div>
           </div>
           </div>
@@ -43,10 +44,11 @@
           <div class="col-lg-4 mb-4">
             <div class="card">
               <img src="https://github.com/OmanoRH.png" class="card-img-top" alt="OmanoRH">
-              <div class="card-body">
+              <div class="card-body" style="text-align: center;">
                 <h5 class="card-title">Renato Hilquias</h5>
                 <p class="for card-text">Front-End</p>
-                <a href="https://github.com/OmanoRH" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
+                <a href="https://github.com/OmanoRH"><i class="mdi mdi-github btn btn-primary"></i></a>
+                <a href="https://br.linkedin.com/in/stuartmorais"><i class="mdi mdi-linkedin btn btn-primary"></i></a>
               </div>
             </div>
           </div>
@@ -54,10 +56,11 @@
           <div class="col-lg-4 mb-4">
             <div class="card">
               <img src="https://github.com/HarumiMori.png" class="card-img-top" alt="Harumi Mori">
-              <div class="card-body">
+              <div class="card-body" style="text-align: center;">
                 <h5 class="for card-title">Harumi Mori</h5>
                 <p class="card-text">Back-End</p>
-                <a href="https://github.com/HarumiMori" class="btn btn-primary" target="_blank">Perfil do GitHub</a>
+                <a href="https://github.com/HarumiMori"><i class="mdi mdi-github btn btn-primary"></i></a>
+                <a href="https://br.linkedin.com/in/stuartmorais"><i class="mdi mdi-linkedin btn btn-primary"></i></a>
               </div>
             </div>
           </div>

@@ -72,7 +72,14 @@
                 $valueData = explode("-", $value['data_criacao']);
                 $valueDataF = $valueData[2]."/".$valueData[1]."/".$valueData[0];
 
-                echo  "<h1>Nome: $value[nome_bolo]</h1> <h2>Criador: $value[nome_criador]</h2> <h2>Data: $valueDataF</h2>";
+                echo  "<h1>Nome: $value[nome_bolo]</h1>";
+                if(empty($value['nome_criador'])){
+                  echo "";
+                } else {
+                  echo " <h2>Criador: $value[nome_criador]</h2> ";
+                }
+
+                echo "<h2>Data: $valueDataF</h2>";
               }
             ?>
           </div>
