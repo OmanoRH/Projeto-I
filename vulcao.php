@@ -43,7 +43,7 @@
 
 
         <!-- Texto de introdução -->
-        <p class="parag mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Aspernatur iusto officiis, consectetur amet dicta quasi voluptates Voluptatem provident perferendis quia.</p>
+        <p class="parag mb-3">Bolos com uma surpresa vulcânica em seu centro, levam ingredientes simples, majoritariamente chocolate <br> reomendado para festas de aniversário </p>
 
         <!--Começo dos Cards de Bolo de Cenoura -->
         <?php

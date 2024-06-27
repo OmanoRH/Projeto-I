@@ -41,7 +41,7 @@
 
 
         <!-- Texto de introdução -->
-        <p class="parag mb-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Aspernatur iusto officiis, consectetur amet dicta quasi voluptates Voluptatem provident perferendis quia.</p>
+        <p class="parag mb-3">Bolos Gourmet são bolos que levam maior tempo, técnica e ingredientes de maior qualidade para seu preparo <br> altamente recomendado para aniversários e comemorações</p>
 
 
         <?php
