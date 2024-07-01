@@ -117,6 +117,9 @@
     <div class="container">
       <div class="row">
 
+        <!-- remove a imagem -->
+        <button type="button" class="btn btn-primary" onclick="removImg()" id="removImg" style="display: none;">Remover Imagem</button>
+
         <!-- Começo do Formulario Front-End de Cadastro do Bolos -->
         <form action="" method="POST" novalidate enctype="multipart/form-data" id="boloForm">
 
@@ -127,9 +130,6 @@
             <label for="fileInput"><span class="mdi mdi-file-upload " id="icon"></span></label>
             <!-- Atributo para que o input fique escondido-->
             <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
-            
-            <!-- remove a imagem -->
-            <button type="button" onclick="removImg()" id="removImg" style="display: none;">remove img</button>
           </div>
 
           <!-- Seleção do Tipo de Bolo -->
