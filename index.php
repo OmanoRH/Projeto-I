@@ -16,7 +16,7 @@
     require("barra-de-navegacao.php");
     require("conexao.php");
 
-        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo ORDER BY RAND() LIMIT 3");
+        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo ORDER BY RAND() LIMIT 6");
         $sql->execute();
         $dadosBC = $sql->fetchAll();
     ?>
@@ -34,7 +34,7 @@
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <?php
-                foreach ($dadosBC as $index => $value) {
+                foreach (array_slice($dadosBC, 0, 3) as $index => $value) {
                     $active = $index === 0 ? 'class="active" aria-current="true"' : '';
                     echo '<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="' . $index . '" ' . $active . ' aria-label="Slide ' . ($index + 1) . '"></button>';
                 }
@@ -42,7 +42,7 @@
             </div>
             <div class="carousel-inner">
                 <?php
-                foreach ($dadosBC as $index => $value) {
+                foreach (array_slice($dadosBC, 0, 3) as $index => $value) {
                     $active = $index === 0 ? 'active' : '';
 
                     $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
@@ -83,7 +83,8 @@
         <div class="row">
             <h2 class="mt-3">Confira nossas outras receitas:</h2>
             <?php
-            foreach ($dadosBC as $value) {
+            foreach (array_slice($dadosBC, -3) as $value) {
+
                 $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
                 foreach ($imageTypes as $type) {
                     $decoded = base64_decode($value['img_bolo'], true);
