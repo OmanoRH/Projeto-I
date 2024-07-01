@@ -19,10 +19,6 @@
         $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo ORDER BY RAND() LIMIT 3");
         $sql->execute();
         $dadosBC = $sql->fetchAll();
-
-        $sql = $pdo->prepare("SELECT id_bolo, img_bolo, nome_bolo FROM bolo LIMIT 6");
-        $sql->execute();
-        $dadosB = $sql->fetchAll();
     ?>
 
     <!-- introdução do site -->
@@ -87,7 +83,7 @@
         <div class="row">
             <h2 class="mt-3">Confira nossas outras receitas:</h2>
             <?php
-            foreach ($dadosB as $value) {
+            foreach ($dadosBC as $value) {
                 $imageTypes = ['jpeg', 'png', 'jpg', 'webp']; // Tipos de imagem para teste
                 foreach ($imageTypes as $type) {
                     $decoded = base64_decode($value['img_bolo'], true);
