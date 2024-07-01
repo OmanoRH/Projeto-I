@@ -106,6 +106,7 @@
           $sql -> execute([$preparoMassa, $preparoCalda, $finalizacaoBolo]);
           
           header("Location:index.php");
+          exit();
         }
 
       }
@@ -126,6 +127,9 @@
             <label for="fileInput"><span class="mdi mdi-file-upload " id="icon"></span></label>
             <!-- Atributo para que o input fique escondido-->
             <input type="file" id="fileInput" style="visibility: hidden;" name="imgPreview" onchange="previewImage()">
+            
+            <!-- remove a imagem -->
+            <button type="button" onclick="removImg()" id="removImg" style="display: none;">remove img</button>
           </div>
 
           <!-- Seleção do Tipo de Bolo -->
