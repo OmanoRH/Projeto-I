@@ -105,8 +105,8 @@
           $sql = $pdo -> prepare("INSERT INTO preparo VALUES (null, ?, ?, ?);");
           $sql -> execute([$preparoMassa, $preparoCalda, $finalizacaoBolo]);
           
-          header("Location:index.php");
-          exit();
+          echo "<script>window.location.href = 'index.php';</script>";
+          
         }
 
       }
