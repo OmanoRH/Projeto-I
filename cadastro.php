@@ -118,7 +118,7 @@
       <div class="row">
 
         <!-- remove a imagem -->
-        <button type="button" class="mb-3 mt-3 btn btn-primary" onclick="removImg()" id="removImg" style="display: none;">Remover Imagem</button>
+        <button type="button" class="mb-3 mt-3 btn btn-primary btn-sm w-25" onclick="removImg()" id="removImg" style="display: none;">Remover Imagem</button>
 
         <!-- Começo do Formulario Front-End de Cadastro do Bolos -->
         <form action="" method="POST" novalidate enctype="multipart/form-data" id="boloForm">
