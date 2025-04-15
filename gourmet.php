@@ -41,7 +41,7 @@
 
 
         <!-- Texto de introdução -->
-        <p class="parag mb-3">Bolos Gourmet são bolos que levam maior tempo, técnica e ingredientes de maior qualidade para seu preparo <br> altamente recomendado para aniversários e comemorações</p>
+        <p class="parag mb-3">Bolos Gourmet são bolos que levam maior tempo, técnica e ingredientes de maior qualidade para seu preparo <br> altamente recomendado para aniversários e comemorações!</p>
 
 
         <?php
